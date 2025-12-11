@@ -1,0 +1,55 @@
+---
+const services = [
+  {
+    icon: 'web',
+    title: 'Niestandardowe aplikacje webowe',
+    description: 'Platformy SaaS na zamówienie i narzędzia wewnętrzne zbudowane w React i Next.js dla maksymalnej wydajności.',
+  },
+  {
+    icon: 'shopping_cart',
+    title: 'E-commerce Headless',
+    description: 'Błyskawicznie szybkie witryny sklepowe korzystające z Shopify Hydrogen lub niestandardowych rozwiązań handlowych Next.js.',
+  },
+  {
+    icon: 'smartphone',
+    title: 'Progressive Web Apps (PWA)',
+    description: 'Doświadczenia mobilne, które działają offline i wyglądają natywnie, bez kłopotów ze sklepem aplikacji.',
+  },
+];
+---
+
+<section id="services" class="py-24 bg-[#0c120f]">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+      <!-- Left Column - Header -->
+      <div class="lg:col-span-5">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Nasza specjalizacja</span>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">Kompleksowe usługi développement</h2>
+        <p class="text-gray-400 text-lg mb-8">
+          Nie tylko piszemy kod; projektujemy rozwiązania napędzające wzrost biznesu. Nasze wyspecjalizowane zespoły pokrywają każdy aspekt nowoczesnego stosu webowego.
+        </p>
+        <a 
+          href="#" 
+          class="inline-flex items-center justify-center h-12 px-6 rounded-full bg-white text-background-dark font-bold text-sm hover:opacity-90 transition-opacity"
+        >
+          Pokaż wszystkie usługi
+        </a>
+      </div>
+
+      <!-- Right Column - Services List -->
+      <div class="lg:col-span-7 flex flex-col gap-6">
+        {services.map((service) => (
+          <div class="group flex items-start gap-6 p-6 rounded-2xl bg-surface-dark border border-transparent hover:border-primary/30 transition-all hover:shadow-lg">
+            <div class="shrink-0 w-12 h-12 rounded-xl bg-surface-dark-lighter flex items-center justify-center text-white group-hover:bg-primary group-hover:text-background-dark transition-colors">
+              <span class="material-symbols-outlined">{service.icon}</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-white group-hover:text-primary transition-colors">{service.title}</h3>
+              <p class="text-gray-400 leading-relaxed">{service.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

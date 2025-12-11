@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Terms of Service | InCode">
+  <Header />
+  
+  <main class="pt-32 pb-20">
+    <div class="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="mb-12">
+        <a href="/" class="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors mb-6">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          Back to Home
+        </a>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Terms of Service</h1>
+        <p class="text-gray-400">Last updated: December 11, 2025</p>
+      </div>
+
+      <!-- Content -->
+      <div class="prose prose-invert prose-lg max-w-none">
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">1. Agreement to Terms</h2>
+          <p class="text-gray-300 mb-4">
+            By accessing or using the services provided by InCode sp. z o.o. ("Company", "we", "us", or "our"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these terms, you do not have permission to access our services.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">2. Services</h2>
+          <p class="text-gray-300 mb-4">
+            InCode provides digital product development services including but not limited to:
+          </p>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+            <li>Web application development</li>
+            <li>Mobile application development</li>
+            <li>UI/UX design services</li>
+            <li>Technical consulting</li>
+            <li>Software maintenance and support</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">3. Client Responsibilities</h2>
+          <p class="text-gray-300 mb-4">
+            As a client, you agree to:
+          </p>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+            <li>Provide accurate and complete information necessary for project completion</li>
+            <li>Respond to requests for feedback and approvals in a timely manner</li>
+            <li>Make payments according to agreed-upon terms</li>
+            <li>Respect intellectual property rights</li>
+            <li>Not use our services for any illegal or unauthorized purpose</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">4. Intellectual Property</h2>
+          <p class="text-gray-300 mb-4">
+            Upon full payment, clients receive ownership rights to the deliverables as specified in the project agreement. However:
+          </p>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+            <li>We retain rights to any pre-existing materials, tools, or frameworks used</li>
+            <li>We may use anonymized project information in our portfolio</li>
+            <li>Open-source components remain subject to their respective licenses</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">5. Payment Terms</h2>
+          <p class="text-gray-300 mb-4">
+            Payment terms are specified in individual project agreements. Generally:
+          </p>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+            <li>A deposit may be required before work begins</li>
+            <li>Invoices are due within 14 days of issuance unless otherwise agreed</li>
+            <li>Late payments may incur interest charges</li>
+            <li>Work may be suspended for overdue payments</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">6. Confidentiality</h2>
+          <p class="text-gray-300">
+            We treat all client information as confidential. We will not disclose your proprietary information to third parties without your consent, except as required by law. This obligation survives the termination of our business relationship.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">7. Limitation of Liability</h2>
+          <p class="text-gray-300">
+            To the maximum extent permitted by law, InCode shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or business opportunities, arising from the use of our services.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">8. Termination</h2>
+          <p class="text-gray-300">
+            Either party may terminate the service agreement with written notice as specified in the project contract. Upon termination, the client is responsible for payment of all work completed up to the termination date.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">9. Governing Law</h2>
+          <p class="text-gray-300">
+            These Terms shall be governed by and construed in accordance with the laws of Poland. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts in Poland.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">10. Contact Information</h2>
+          <p class="text-gray-300 mb-4">
+            For questions about these Terms of Service, please contact us:
+          </p>
+          <div class="bg-white/5 rounded-xl p-6 border border-white/10">
+            <p class="text-gray-300 mb-2"><strong class="text-white">InCode sp. z o.o.</strong></p>
+            <p class="text-gray-300 mb-2">Email: legal@incode.pl</p>
+            <p class="text-gray-300">Address: Poland</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+

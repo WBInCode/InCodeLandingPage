@@ -1,0 +1,58 @@
+---
+const projects = [
+  {
+    title: 'NeoBank Dashboard',
+    category: 'FINTECH',
+    description: 'Platforma wizualizacji danych finansowych w czasie rzeczywistym.',
+    tags: ['Next.js', 'Finanse'],
+    gradient: 'from-slate-800 to-slate-600',
+  },
+  {
+    title: 'HealthStream App',
+    category: 'MEDTECH',
+    description: 'System monitorowania pacjentów dla szpitali.',
+    tags: ['React Native', 'Opieka zdrowotna'],
+    gradient: 'from-emerald-900 to-slate-900',
+  },
+];
+---
+
+<section id="work" class="py-24 bg-background-dark">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Wybrane prace</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">Popatrz, jak pomogliśmy firmom zaznaczyć ich cyfrową obecność.</p>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {projects.map((project) => (
+        <div class="group cursor-pointer">
+          <div class="overflow-hidden rounded-2xl mb-4 bg-surface-dark aspect-video relative">
+            <div class={`absolute inset-0 bg-gradient-to-tr ${project.gradient} opacity-90 group-hover:scale-105 transition-transform duration-500`}></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="text-white/20 text-6xl font-black tracking-tighter">{project.category}</span>
+            </div>
+            <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/80 to-transparent">
+              <div class="flex gap-2 mb-2">
+                {project.tags.map((tag) => (
+                  <span class="text-xs font-bold px-2 py-1 bg-white/20 backdrop-blur-sm rounded text-white">{tag}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+          <h3 class="text-2xl font-bold mb-1 text-white group-hover:text-primary transition-colors">{project.title}</h3>
+          <p class="text-gray-500">{project.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- View All Link -->
+    <div class="mt-12 text-center">
+      <a href="#" class="inline-block border-b border-gray-600 pb-1 text-sm font-bold uppercase tracking-widest text-white hover:text-primary hover:border-primary transition-colors">
+        Pokaż wszystkie case studies
+      </a>
+    </div>
+  </div>
+</section>

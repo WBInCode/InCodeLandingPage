@@ -1,0 +1,33 @@
+---
+const stats = [
+  { icon: 'rocket_launch', number: '50+', label: 'Zrealizowanych projektów' },
+  { icon: 'thumb_up', number: '98%', label: 'Zadowolonych klientów' },
+  { icon: 'support_agent', number: '24/7', label: 'Wsparcie techniczne' },
+  { icon: 'speed', number: '95+', label: 'Zoptymalizowane SEO' },
+  { icon: 'phone_android', number: '100%', label: 'Pełna responsywność' },
+];
+---
+
+<section class="border-y border-white/5 bg-black/20 py-10">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-center text-sm font-medium text-gray-500 mb-8 uppercase tracking-widest">
+      Nasze osiągnięcia
+    </p>
+    
+    <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+      {stats.map((stat) => (
+        <div class="flex flex-col items-center gap-2 text-center group hover:scale-105 transition-transform duration-300">
+          <span class="material-symbols-outlined text-4xl text-emerald-500 group-hover:text-emerald-400 transition-colors">
+            {stat.icon}
+          </span>
+          <div class="text-3xl font-bold text-white">
+            {stat.number}
+          </div>
+          <div class="text-sm text-gray-400 max-w-[120px]">
+            {stat.label}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

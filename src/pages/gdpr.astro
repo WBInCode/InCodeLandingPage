@@ -1,0 +1,208 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="GDPR Compliance | InCode">
+  <Header />
+  
+  <main class="pt-32 pb-20">
+    <div class="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="mb-12">
+        <a href="/" class="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors mb-6">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          Back to Home
+        </a>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">GDPR Compliance</h1>
+        <p class="text-gray-400">Last updated: December 11, 2025</p>
+      </div>
+
+      <!-- Content -->
+      <div class="prose prose-invert prose-lg max-w-none">
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">Our Commitment to GDPR</h2>
+          <p class="text-gray-300 mb-4">
+            InCode sp. z o.o. is fully committed to complying with the General Data Protection Regulation (GDPR). As a company based in Poland, we adhere to the highest standards of data protection and privacy for all individuals within the European Union.
+          </p>
+          <p class="text-gray-300">
+            This page outlines how we ensure GDPR compliance and explains your rights as a data subject.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">Data Controller Information</h2>
+          <div class="bg-white/5 rounded-xl p-6 border border-white/10">
+            <p class="text-gray-300 mb-2"><strong class="text-white">Data Controller:</strong> InCode sp. z o.o.</p>
+            <p class="text-gray-300 mb-2"><strong class="text-white">Contact Email:</strong> dpo@incode.pl</p>
+            <p class="text-gray-300 mb-2"><strong class="text-white">Address:</strong> Poland</p>
+            <p class="text-gray-300"><strong class="text-white">Data Protection Officer:</strong> Available upon request</p>
+          </div>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">Your Rights Under GDPR</h2>
+          <p class="text-gray-300 mb-6">
+            Under the GDPR, you have the following rights regarding your personal data:
+          </p>
+          
+          <div class="space-y-6">
+            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-6 border-l-4 border-primary">
+              <h3 class="text-xl font-semibold text-white mb-2">Right to Access (Article 15)</h3>
+              <p class="text-gray-300">
+                You have the right to obtain confirmation as to whether your personal data is being processed, and if so, access to that data along with information about how it is used.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-6 border-l-4 border-primary">
+              <h3 class="text-xl font-semibold text-white mb-2">Right to Rectification (Article 16)</h3>
+              <p class="text-gray-300">
+                You have the right to have inaccurate personal data corrected and incomplete data completed.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-6 border-l-4 border-primary">
+              <h3 class="text-xl font-semibold text-white mb-2">Right to Erasure (Article 17)</h3>
+              <p class="text-gray-300">
+                Also known as the "right to be forgotten," you can request the deletion of your personal data when it's no longer necessary for the purpose it was collected.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-6 border-l-4 border-primary">
+              <h3 class="text-xl font-semibold text-white mb-2">Right to Restrict Processing (Article 18)</h3>
+              <p class="text-gray-300">
+                You can request the restriction of processing of your personal data in certain circumstances.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-6 border-l-4 border-primary">
+              <h3 class="text-xl font-semibold text-white mb-2">Right to Data Portability (Article 20)</h3>
+              <p class="text-gray-300">
+                You have the right to receive your personal data in a structured, commonly used, and machine-readable format.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-6 border-l-4 border-primary">
+              <h3 class="text-xl font-semibold text-white mb-2">Right to Object (Article 21)</h3>
+              <p class="text-gray-300">
+                You have the right to object to the processing of your personal data, including for direct marketing purposes.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-6 border-l-4 border-primary">
+              <h3 class="text-xl font-semibold text-white mb-2">Right to Withdraw Consent (Article 7)</h3>
+              <p class="text-gray-300">
+                Where processing is based on consent, you have the right to withdraw that consent at any time.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">Legal Basis for Processing</h2>
+          <p class="text-gray-300 mb-4">
+            We process personal data only when we have a lawful basis to do so:
+          </p>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+            <li><strong class="text-white">Consent:</strong> You have given clear consent for us to process your personal data for a specific purpose.</li>
+            <li><strong class="text-white">Contract:</strong> Processing is necessary for a contract we have with you, or because you have asked us to take specific steps before entering into a contract.</li>
+            <li><strong class="text-white">Legal obligation:</strong> Processing is necessary for us to comply with the law.</li>
+            <li><strong class="text-white">Legitimate interests:</strong> Processing is necessary for our legitimate interests or the legitimate interests of a third party.</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">Data Protection Measures</h2>
+          <p class="text-gray-300 mb-4">
+            We implement appropriate technical and organizational measures to ensure data security:
+          </p>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white/5 rounded-xl p-4 border border-white/10">
+              <div class="flex items-center gap-3 mb-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+                <span class="text-white font-semibold">Encryption</span>
+              </div>
+              <p class="text-gray-400 text-sm">Data encrypted in transit and at rest</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-4 border border-white/10">
+              <div class="flex items-center gap-3 mb-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+                <span class="text-white font-semibold">Access Control</span>
+              </div>
+              <p class="text-gray-400 text-sm">Role-based access to personal data</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-4 border border-white/10">
+              <div class="flex items-center gap-3 mb-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                </svg>
+                <span class="text-white font-semibold">Audit Logs</span>
+              </div>
+              <p class="text-gray-400 text-sm">Comprehensive logging of data access</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-4 border border-white/10">
+              <div class="flex items-center gap-3 mb-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
+                <span class="text-white font-semibold">Staff Training</span>
+              </div>
+              <p class="text-gray-400 text-sm">Regular GDPR awareness training</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">Data Breach Notification</h2>
+          <p class="text-gray-300">
+            In the event of a personal data breach that is likely to result in a risk to your rights and freedoms, we will notify the relevant supervisory authority within 72 hours. If the breach is likely to result in a high risk to your rights and freedoms, we will also notify you directly.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">International Data Transfers</h2>
+          <p class="text-gray-300">
+            When we transfer personal data outside the European Economic Area (EEA), we ensure appropriate safeguards are in place, such as Standard Contractual Clauses approved by the European Commission or transfers to countries with an adequacy decision.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">Exercise Your Rights</h2>
+          <p class="text-gray-300 mb-4">
+            To exercise any of your rights under GDPR, please contact us using the information below. We will respond to your request within 30 days.
+          </p>
+          <div class="bg-white/5 rounded-xl p-6 border border-white/10">
+            <p class="text-gray-300 mb-2"><strong class="text-white">Email:</strong> dpo@incode.pl</p>
+            <p class="text-gray-300 mb-4"><strong class="text-white">Subject Line:</strong> GDPR Request - [Your Request Type]</p>
+            <p class="text-gray-400 text-sm">
+              Please include your full name and enough information for us to verify your identity and locate your personal data.
+            </p>
+          </div>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4">Supervisory Authority</h2>
+          <p class="text-gray-300 mb-4">
+            If you believe we have not handled your personal data properly or have concerns about our data protection practices, you have the right to lodge a complaint with a supervisory authority. In Poland, this is:
+          </p>
+          <div class="bg-white/5 rounded-xl p-6 border border-white/10">
+            <p class="text-gray-300 mb-2"><strong class="text-white">Urząd Ochrony Danych Osobowych (UODO)</strong></p>
+            <p class="text-gray-300 mb-2">ul. Stawki 2, 00-193 Warszawa</p>
+            <p class="text-gray-300 mb-2">Website: <a href="https://uodo.gov.pl" class="text-primary hover:underline">uodo.gov.pl</a></p>
+            <p class="text-gray-300">Email: kancelaria@uodo.gov.pl</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
