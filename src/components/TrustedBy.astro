@@ -8,26 +8,41 @@ const stats = [
 ];
 ---
 
-<section class="border-y border-white/5 bg-black/20 py-10">
-  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-    <p class="text-center text-sm font-medium text-gray-500 mb-8 uppercase tracking-widest">
-      Nasze osiągnięcia
-    </p>
-    
-    <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
-      {stats.map((stat) => (
-        <div class="flex flex-col items-center gap-2 text-center group hover:scale-105 transition-transform duration-300">
-          <span class="material-symbols-outlined text-4xl text-emerald-500 group-hover:text-emerald-400 transition-colors">
-            {stat.icon}
-          </span>
-          <div class="text-3xl font-bold text-white">
-            {stat.number}
+<section class="py-16">
+  <div class="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Elegant container with glass effect -->
+    <div class="relative rounded-3xl bg-white/[0.03] backdrop-blur-sm border border-white/[0.08] p-8 md:p-10 overflow-hidden">
+      <!-- Subtle corner accents -->
+      <div class="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-primary/30 rounded-tl-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-20 h-20 border-r-2 border-b-2 border-primary/30 rounded-br-3xl"></div>
+      
+      <!-- Inner glow effect -->
+      <div class="absolute inset-0 bg-gradient-to-b from-primary/[0.03] to-transparent pointer-events-none"></div>
+      
+      <p class="relative text-center text-xs font-bold text-primary/80 mb-10 uppercase tracking-[0.2em]">
+        Nasze osiągnięcia
+      </p>
+      
+      <div class="relative grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-4">
+        {stats.map((stat, index) => (
+          <div class="flex flex-col items-center text-center group">
+            <!-- Icon container -->
+            <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+              <span class="material-symbols-outlined text-2xl text-primary">
+                {stat.icon}
+              </span>
+            </div>
+            <!-- Number -->
+            <div class="text-3xl md:text-4xl font-bold text-white mb-1 group-hover:text-primary transition-colors duration-300">
+              {stat.number}
+            </div>
+            <!-- Label -->
+            <div class="text-xs text-gray-400 max-w-[100px] leading-tight">
+              {stat.label}
+            </div>
           </div>
-          <div class="text-sm text-gray-400 max-w-[120px]">
-            {stat.label}
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   </div>
 </section>

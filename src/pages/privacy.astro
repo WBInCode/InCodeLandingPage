@@ -4,111 +4,258 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Privacy Policy | InCode">
+<Layout title="Polityka Prywatności | InCode">
   <Header />
   
-  <main class="pt-32 pb-20">
-    <div class="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8">
+  <main class="pt-32 pb-20 relative overflow-hidden">
+    <!-- Background with green gradient glow -->
+    <div class="absolute inset-0 bg-background-dark z-0">
+      <div class="absolute top-0 left-1/4 w-[800px] h-[600px] bg-primary/10 rounded-full blur-[180px]"></div>
+      <div class="absolute bottom-0 right-1/4 w-[600px] h-[400px] bg-primary/8 rounded-full blur-[150px]"></div>
+    </div>
+
+    <div class="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Header -->
-      <div class="mb-12">
-        <a href="/" class="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors mb-6">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="mb-16">
+        <a href="/" class="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors mb-8 group">
+          <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
           </svg>
-          Back to Home
+          Powrót do strony głównej
         </a>
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Privacy Policy</h1>
-        <p class="text-gray-400">Last updated: December 11, 2025</p>
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight">Polityka Prywatności</h1>
+          </div>
+        </div>
+        <p class="text-gray-400">Ostatnia aktualizacja: 11 grudnia 2025</p>
       </div>
 
       <!-- Content -->
-      <div class="prose prose-invert prose-lg max-w-none">
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">1. Introduction</h2>
-          <p class="text-gray-300 mb-4">
-            InCode sp. z o.o. ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+      <div class="space-y-10">
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">1</span>
+            Wprowadzenie
+          </h2>
+          <p class="text-gray-300 mb-4 leading-relaxed">
+            InCode sp. z o.o. („my", „nasz" lub „nas") zobowiązuje się do ochrony Twojej prywatności. Niniejsza Polityka Prywatności wyjaśnia, w jaki sposób zbieramy, wykorzystujemy, ujawniamy i chronimy Twoje dane podczas korzystania z naszej strony internetowej lub usług.
           </p>
-          <p class="text-gray-300">
-            Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
+          <p class="text-gray-300 leading-relaxed">
+            Prosimy o uważne zapoznanie się z niniejszą polityką prywatności. Jeśli nie zgadzasz się z warunkami tej polityki, prosimy o niekorzystanie z serwisu.
           </p>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">2. Information We Collect</h2>
-          <h3 class="text-xl font-semibold text-white mb-3">Personal Data</h3>
-          <p class="text-gray-300 mb-4">
-            We may collect personally identifiable information that you voluntarily provide to us when you:
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">2</span>
+            Zbierane informacje
+          </h2>
+          <h3 class="text-xl font-semibold text-white mb-4">Dane osobowe</h3>
+          <p class="text-gray-300 mb-4 leading-relaxed">
+            Możemy zbierać dane osobowe, które dobrowolnie nam przekazujesz, gdy:
           </p>
-          <ul class="list-disc list-inside text-gray-300 mb-4 space-y-2">
-            <li>Fill out a contact form</li>
-            <li>Subscribe to our newsletter</li>
-            <li>Request a quote or consultation</li>
-            <li>Communicate with us via email or phone</li>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start gap-3 text-gray-300">
+              <span class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></span>
+              Wypełniasz formularz kontaktowy
+            </li>
+            <li class="flex items-start gap-3 text-gray-300">
+              <span class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></span>
+              Zapisujesz się do naszego newslettera
+            </li>
+            <li class="flex items-start gap-3 text-gray-300">
+              <span class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></span>
+              Prosisz o wycenę lub konsultację
+            </li>
+            <li class="flex items-start gap-3 text-gray-300">
+              <span class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></span>
+              Komunikujesz się z nami przez e-mail lub telefon
+            </li>
           </ul>
-          <p class="text-gray-300 mb-4">
-            This information may include:
+          <p class="text-gray-300 mb-4 leading-relaxed">
+            Te informacje mogą obejmować:
           </p>
-          <ul class="list-disc list-inside text-gray-300 space-y-2">
-            <li>Name and surname</li>
-            <li>Email address</li>
-            <li>Phone number</li>
-            <li>Company name</li>
-            <li>Project details and requirements</li>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div class="bg-white/5 rounded-xl px-4 py-3 text-gray-300 text-sm">Imię i nazwisko</div>
+            <div class="bg-white/5 rounded-xl px-4 py-3 text-gray-300 text-sm">Adres e-mail</div>
+            <div class="bg-white/5 rounded-xl px-4 py-3 text-gray-300 text-sm">Numer telefonu</div>
+            <div class="bg-white/5 rounded-xl px-4 py-3 text-gray-300 text-sm">Nazwa firmy</div>
+            <div class="bg-white/5 rounded-xl px-4 py-3 text-gray-300 text-sm col-span-2">Szczegóły i wymagania projektu</div>
+          </div>
+        </section>
+
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">3</span>
+            Jak wykorzystujemy Twoje dane
+          </h2>
+          <p class="text-gray-300 mb-4 leading-relaxed">
+            Wykorzystujemy zebrane informacje w różnych celach, w tym:
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-gray-300">
+              <svg class="w-5 h-5 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Odpowiadanie na Twoje zapytania i zapewnienie obsługi klienta
+            </li>
+            <li class="flex items-start gap-3 text-gray-300">
+              <svg class="w-5 h-5 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Wysyłanie informacji o naszych usługach
+            </li>
+            <li class="flex items-start gap-3 text-gray-300">
+              <svg class="w-5 h-5 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Ulepszanie naszej strony i usług
+            </li>
+            <li class="flex items-start gap-3 text-gray-300">
+              <svg class="w-5 h-5 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Wypełnianie obowiązków prawnych
+            </li>
+            <li class="flex items-start gap-3 text-gray-300">
+              <svg class="w-5 h-5 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Ochrona naszych praw i zapobieganie oszustwom
+            </li>
           </ul>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">3. How We Use Your Information</h2>
-          <p class="text-gray-300 mb-4">
-            We use the information we collect for various purposes, including:
-          </p>
-          <ul class="list-disc list-inside text-gray-300 space-y-2">
-            <li>To respond to your inquiries and provide customer support</li>
-            <li>To send you information about our services</li>
-            <li>To improve our website and services</li>
-            <li>To comply with legal obligations</li>
-            <li>To protect our rights and prevent fraud</li>
-          </ul>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">4. Data Retention</h2>
-          <p class="text-gray-300">
-            We will retain your personal data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">4</span>
+            Przechowywanie danych
+          </h2>
+          <p class="text-gray-300 leading-relaxed">
+            Będziemy przechowywać Twoje dane osobowe tylko tak długo, jak jest to konieczne do celów określonych w niniejszej Polityce Prywatności. Będziemy przechowywać i wykorzystywać Twoje dane w zakresie niezbędnym do wypełnienia naszych obowiązków prawnych, rozstrzygania sporów i egzekwowania naszych zasad.
           </p>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">5. Data Security</h2>
-          <p class="text-gray-300">
-            We implement appropriate technical and organizational security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">5</span>
+            Bezpieczeństwo danych
+          </h2>
+          <p class="text-gray-300 leading-relaxed">
+            Wdrażamy odpowiednie techniczne i organizacyjne środki bezpieczeństwa w celu ochrony Twoich danych osobowych przed nieautoryzowanym dostępem, zmianą, ujawnieniem lub zniszczeniem. Jednak żadna metoda transmisji przez Internet ani elektronicznego przechowywania nie jest w 100% bezpieczna i nie możemy zagwarantować absolutnego bezpieczeństwa.
           </p>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">6. Your Rights</h2>
-          <p class="text-gray-300 mb-4">
-            Under GDPR, you have the following rights:
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">6</span>
+            Twoje prawa
+          </h2>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Zgodnie z RODO przysługują Ci następujące prawa:
           </p>
-          <ul class="list-disc list-inside text-gray-300 space-y-2">
-            <li><strong class="text-white">Right to access</strong> - You can request copies of your personal data</li>
-            <li><strong class="text-white">Right to rectification</strong> - You can request correction of inaccurate data</li>
-            <li><strong class="text-white">Right to erasure</strong> - You can request deletion of your personal data</li>
-            <li><strong class="text-white">Right to restrict processing</strong> - You can request limitation of data processing</li>
-            <li><strong class="text-white">Right to data portability</strong> - You can request transfer of your data</li>
-            <li><strong class="text-white">Right to object</strong> - You can object to processing of your personal data</li>
-          </ul>
+          <div class="grid gap-4">
+            <div class="flex items-start gap-4 bg-white/5 rounded-xl p-4">
+              <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+              </div>
+              <div>
+                <strong class="text-white">Prawo dostępu</strong>
+                <p class="text-gray-400 text-sm mt-1">Możesz żądać kopii swoich danych osobowych</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 bg-white/5 rounded-xl p-4">
+              <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                </svg>
+              </div>
+              <div>
+                <strong class="text-white">Prawo do sprostowania</strong>
+                <p class="text-gray-400 text-sm mt-1">Możesz żądać korekty niedokładnych danych</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 bg-white/5 rounded-xl p-4">
+              <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                </svg>
+              </div>
+              <div>
+                <strong class="text-white">Prawo do usunięcia</strong>
+                <p class="text-gray-400 text-sm mt-1">Możesz żądać usunięcia swoich danych osobowych</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 bg-white/5 rounded-xl p-4">
+              <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
+                </svg>
+              </div>
+              <div>
+                <strong class="text-white">Prawo do ograniczenia przetwarzania</strong>
+                <p class="text-gray-400 text-sm mt-1">Możesz żądać ograniczenia przetwarzania danych</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 bg-white/5 rounded-xl p-4">
+              <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                </svg>
+              </div>
+              <div>
+                <strong class="text-white">Prawo do przenoszenia danych</strong>
+                <p class="text-gray-400 text-sm mt-1">Możesz żądać transferu swoich danych</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 bg-white/5 rounded-xl p-4">
+              <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </div>
+              <div>
+                <strong class="text-white">Prawo do sprzeciwu</strong>
+                <p class="text-gray-400 text-sm mt-1">Możesz sprzeciwić się przetwarzaniu swoich danych osobowych</p>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">7. Contact Us</h2>
-          <p class="text-gray-300 mb-4">
-            If you have any questions about this Privacy Policy or our data practices, please contact us:
+        <section class="bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl p-8 border border-primary/20">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/30 flex items-center justify-center text-primary text-sm font-bold">7</span>
+            Kontakt
+          </h2>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Jeśli masz pytania dotyczące niniejszej Polityki Prywatności lub naszych praktyk w zakresie danych, skontaktuj się z nami:
           </p>
-          <div class="bg-white/5 rounded-xl p-6 border border-white/10">
-            <p class="text-gray-300 mb-2"><strong class="text-white">InCode sp. z o.o.</strong></p>
-            <p class="text-gray-300 mb-2">Email: privacy@incode.pl</p>
-            <p class="text-gray-300">Address: Poland</p>
+          <div class="bg-background-dark/50 rounded-xl p-6 border border-white/10">
+            <p class="text-white font-bold text-lg mb-4">InCode sp. z o.o.</p>
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                <a href="mailto:technical-support@wb-partners.pl" class="text-gray-300 hover:text-primary transition-colors">technical-support@wb-partners.pl</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <span class="text-gray-300">ul. Słowackiego 24/11, 35-060 Rzeszów</span>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -117,4 +264,3 @@ import Footer from '../components/Footer.astro';
 
   <Footer />
 </Layout>
-

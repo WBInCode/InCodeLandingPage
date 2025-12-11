@@ -13,7 +13,16 @@ import Footer from '../components/Footer.astro';
 
 <Layout title="Agencja Technologiczna - Rozwiązania React dla Przedsiębiorstw">
   <Header />
-  <main>
+  
+  <!-- Global background with green gradient glows -->
+  <div class="fixed inset-0 bg-background-dark z-0 pointer-events-none">
+    <div class="absolute top-[10%] left-[20%] w-[800px] h-[600px] bg-primary/12 rounded-full blur-[200px]"></div>
+    <div class="absolute top-[40%] right-[10%] w-[600px] h-[500px] bg-primary/10 rounded-full blur-[180px]"></div>
+    <div class="absolute top-[70%] left-[30%] w-[700px] h-[500px] bg-primary/8 rounded-full blur-[160px]"></div>
+    <div class="absolute bottom-[5%] right-[25%] w-[500px] h-[400px] bg-primary/10 rounded-full blur-[150px]"></div>
+  </div>
+
+  <main class="relative z-10">
     <Hero />
     <TrustedBy />
     <WhyUs />

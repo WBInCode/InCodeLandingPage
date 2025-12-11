@@ -4,199 +4,370 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="GDPR Compliance | InCode">
+<Layout title="Zgodność z RODO | InCode">
   <Header />
   
-  <main class="pt-32 pb-20">
-    <div class="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8">
+  <main class="pt-32 pb-20 relative overflow-hidden">
+    <!-- Background with green gradient glow -->
+    <div class="absolute inset-0 bg-background-dark z-0">
+      <div class="absolute top-1/4 left-0 w-[800px] h-[600px] bg-primary/10 rounded-full blur-[180px]"></div>
+      <div class="absolute bottom-0 right-1/4 w-[600px] h-[400px] bg-primary/8 rounded-full blur-[150px]"></div>
+    </div>
+
+    <div class="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Header -->
-      <div class="mb-12">
-        <a href="/" class="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors mb-6">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="mb-16">
+        <a href="/" class="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors mb-8 group">
+          <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
           </svg>
-          Back to Home
+          Powrót do strony głównej
         </a>
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">GDPR Compliance</h1>
-        <p class="text-gray-400">Last updated: December 11, 2025</p>
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight">Zgodność z RODO</h1>
+          </div>
+        </div>
+        <p class="text-gray-400">Ostatnia aktualizacja: 11 grudnia 2025</p>
       </div>
 
       <!-- Content -->
-      <div class="prose prose-invert prose-lg max-w-none">
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">Our Commitment to GDPR</h2>
-          <p class="text-gray-300 mb-4">
-            InCode sp. z o.o. is fully committed to complying with the General Data Protection Regulation (GDPR). As a company based in Poland, we adhere to the highest standards of data protection and privacy for all individuals within the European Union.
+      <div class="space-y-10">
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-4">Nasze zobowiązanie wobec RODO</h2>
+          <p class="text-gray-300 mb-4 leading-relaxed">
+            InCode sp. z o.o. jest w pełni zaangażowana w przestrzeganie Ogólnego Rozporządzenia o Ochronie Danych (RODO). Jako firma z siedzibą w Polsce, stosujemy najwyższe standardy ochrony danych i prywatności dla wszystkich osób w Unii Europejskiej.
           </p>
-          <p class="text-gray-300">
-            This page outlines how we ensure GDPR compliance and explains your rights as a data subject.
+          <p class="text-gray-300 leading-relaxed">
+            Ta strona opisuje, w jaki sposób zapewniamy zgodność z RODO i wyjaśnia Twoje prawa jako osoby, której dane dotyczą.
           </p>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">Data Controller Information</h2>
-          <div class="bg-white/5 rounded-xl p-6 border border-white/10">
-            <p class="text-gray-300 mb-2"><strong class="text-white">Data Controller:</strong> InCode sp. z o.o.</p>
-            <p class="text-gray-300 mb-2"><strong class="text-white">Contact Email:</strong> dpo@incode.pl</p>
-            <p class="text-gray-300 mb-2"><strong class="text-white">Address:</strong> Poland</p>
-            <p class="text-gray-300"><strong class="text-white">Data Protection Officer:</strong> Available upon request</p>
+        <section class="bg-gradient-to-br from-primary/15 to-primary/5 rounded-2xl p-8 border border-primary/20">
+          <h2 class="text-2xl font-bold text-white mb-6">Informacje o Administratorze Danych</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-gray-400 text-sm">Administrator Danych</p>
+                  <p class="text-white font-semibold">InCode sp. z o.o.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-gray-400 text-sm">Email kontaktowy</p>
+                  <a href="mailto:technical-support@wb-partners.pl" class="text-white font-semibold hover:text-primary transition-colors">technical-support@wb-partners.pl</a>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-gray-400 text-sm">Adres</p>
+                  <p class="text-white font-semibold">ul. Słowackiego 24/11<br/>35-060 Rzeszów</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-gray-400 text-sm">Inspektor Ochrony Danych</p>
+                  <p class="text-white font-semibold">Dostępny na życzenie</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">Your Rights Under GDPR</h2>
-          <p class="text-gray-300 mb-6">
-            Under the GDPR, you have the following rights regarding your personal data:
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-6">Twoje prawa zgodnie z RODO</h2>
+          <p class="text-gray-300 mb-8 leading-relaxed">
+            Zgodnie z RODO przysługują Ci następujące prawa dotyczące Twoich danych osobowych:
           </p>
           
-          <div class="space-y-6">
-            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-6 border-l-4 border-primary">
-              <h3 class="text-xl font-semibold text-white mb-2">Right to Access (Article 15)</h3>
-              <p class="text-gray-300">
-                You have the right to obtain confirmation as to whether your personal data is being processed, and if so, access to that data along with information about how it is used.
-              </p>
+          <div class="grid gap-4">
+            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-5 border-l-4 border-primary hover:from-primary/15 transition-colors">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                  <span class="text-primary font-bold">15</span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-white mb-1">Prawo dostępu (Art. 15)</h3>
+                  <p class="text-gray-400 text-sm">
+                    Masz prawo uzyskać potwierdzenie, czy Twoje dane osobowe są przetwarzane, a jeśli tak, uzyskać dostęp do tych danych wraz z informacjami o sposobie ich wykorzystania.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-6 border-l-4 border-primary">
-              <h3 class="text-xl font-semibold text-white mb-2">Right to Rectification (Article 16)</h3>
-              <p class="text-gray-300">
-                You have the right to have inaccurate personal data corrected and incomplete data completed.
-              </p>
+            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-5 border-l-4 border-primary hover:from-primary/15 transition-colors">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                  <span class="text-primary font-bold">16</span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-white mb-1">Prawo do sprostowania (Art. 16)</h3>
+                  <p class="text-gray-400 text-sm">
+                    Masz prawo do poprawienia niedokładnych danych osobowych oraz uzupełnienia niekompletnych danych.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-6 border-l-4 border-primary">
-              <h3 class="text-xl font-semibold text-white mb-2">Right to Erasure (Article 17)</h3>
-              <p class="text-gray-300">
-                Also known as the "right to be forgotten," you can request the deletion of your personal data when it's no longer necessary for the purpose it was collected.
-              </p>
+            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-5 border-l-4 border-primary hover:from-primary/15 transition-colors">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                  <span class="text-primary font-bold">17</span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-white mb-1">Prawo do usunięcia (Art. 17)</h3>
+                  <p class="text-gray-400 text-sm">
+                    Znane również jako „prawo do bycia zapomnianym" - możesz żądać usunięcia swoich danych osobowych, gdy nie są już niezbędne do celu, w jakim zostały zebrane.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-6 border-l-4 border-primary">
-              <h3 class="text-xl font-semibold text-white mb-2">Right to Restrict Processing (Article 18)</h3>
-              <p class="text-gray-300">
-                You can request the restriction of processing of your personal data in certain circumstances.
-              </p>
+            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-5 border-l-4 border-primary hover:from-primary/15 transition-colors">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                  <span class="text-primary font-bold">18</span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-white mb-1">Prawo do ograniczenia przetwarzania (Art. 18)</h3>
+                  <p class="text-gray-400 text-sm">
+                    Możesz żądać ograniczenia przetwarzania swoich danych osobowych w określonych okolicznościach.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-6 border-l-4 border-primary">
-              <h3 class="text-xl font-semibold text-white mb-2">Right to Data Portability (Article 20)</h3>
-              <p class="text-gray-300">
-                You have the right to receive your personal data in a structured, commonly used, and machine-readable format.
-              </p>
+            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-5 border-l-4 border-primary hover:from-primary/15 transition-colors">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                  <span class="text-primary font-bold">20</span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-white mb-1">Prawo do przenoszenia danych (Art. 20)</h3>
+                  <p class="text-gray-400 text-sm">
+                    Masz prawo otrzymać swoje dane osobowe w ustrukturyzowanym, powszechnie używanym formacie nadającym się do odczytu maszynowego.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-6 border-l-4 border-primary">
-              <h3 class="text-xl font-semibold text-white mb-2">Right to Object (Article 21)</h3>
-              <p class="text-gray-300">
-                You have the right to object to the processing of your personal data, including for direct marketing purposes.
-              </p>
+            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-5 border-l-4 border-primary hover:from-primary/15 transition-colors">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                  <span class="text-primary font-bold">21</span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-white mb-1">Prawo do sprzeciwu (Art. 21)</h3>
+                  <p class="text-gray-400 text-sm">
+                    Masz prawo sprzeciwić się przetwarzaniu swoich danych osobowych, w tym do celów marketingu bezpośredniego.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-6 border-l-4 border-primary">
-              <h3 class="text-xl font-semibold text-white mb-2">Right to Withdraw Consent (Article 7)</h3>
-              <p class="text-gray-300">
-                Where processing is based on consent, you have the right to withdraw that consent at any time.
-              </p>
+            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-5 border-l-4 border-primary hover:from-primary/15 transition-colors">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                  <span class="text-primary font-bold">7</span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-white mb-1">Prawo do wycofania zgody (Art. 7)</h3>
+                  <p class="text-gray-400 text-sm">
+                    Jeśli przetwarzanie opiera się na zgodzie, masz prawo wycofać tę zgodę w dowolnym momencie.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">Legal Basis for Processing</h2>
-          <p class="text-gray-300 mb-4">
-            We process personal data only when we have a lawful basis to do so:
-          </p>
-          <ul class="list-disc list-inside text-gray-300 space-y-2">
-            <li><strong class="text-white">Consent:</strong> You have given clear consent for us to process your personal data for a specific purpose.</li>
-            <li><strong class="text-white">Contract:</strong> Processing is necessary for a contract we have with you, or because you have asked us to take specific steps before entering into a contract.</li>
-            <li><strong class="text-white">Legal obligation:</strong> Processing is necessary for us to comply with the law.</li>
-            <li><strong class="text-white">Legitimate interests:</strong> Processing is necessary for our legitimate interests or the legitimate interests of a third party.</li>
-          </ul>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">Data Protection Measures</h2>
-          <p class="text-gray-300 mb-4">
-            We implement appropriate technical and organizational measures to ensure data security:
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-6">Podstawa prawna przetwarzania</h2>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Przetwarzamy dane osobowe tylko wtedy, gdy mamy do tego podstawę prawną:
           </p>
           <div class="grid md:grid-cols-2 gap-4">
-            <div class="bg-white/5 rounded-xl p-4 border border-white/10">
-              <div class="flex items-center gap-3 mb-2">
-                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                </svg>
-                <span class="text-white font-semibold">Encryption</span>
+            <div class="bg-white/5 rounded-xl p-5 hover:bg-white/10 transition-colors">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <strong class="text-white">Zgoda</strong>
               </div>
-              <p class="text-gray-400 text-sm">Data encrypted in transit and at rest</p>
+              <p class="text-gray-400 text-sm">Wyraziłeś wyraźną zgodę na przetwarzanie danych w określonym celu.</p>
             </div>
-            <div class="bg-white/5 rounded-xl p-4 border border-white/10">
-              <div class="flex items-center gap-3 mb-2">
-                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                </svg>
-                <span class="text-white font-semibold">Access Control</span>
+            <div class="bg-white/5 rounded-xl p-5 hover:bg-white/10 transition-colors">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                  </svg>
+                </div>
+                <strong class="text-white">Umowa</strong>
               </div>
-              <p class="text-gray-400 text-sm">Role-based access to personal data</p>
+              <p class="text-gray-400 text-sm">Przetwarzanie jest niezbędne do wykonania umowy lub podjęcia działań przed jej zawarciem.</p>
             </div>
-            <div class="bg-white/5 rounded-xl p-4 border border-white/10">
-              <div class="flex items-center gap-3 mb-2">
-                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-                </svg>
-                <span class="text-white font-semibold">Audit Logs</span>
+            <div class="bg-white/5 rounded-xl p-5 hover:bg-white/10 transition-colors">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-orange-500/20 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path>
+                  </svg>
+                </div>
+                <strong class="text-white">Obowiązek prawny</strong>
               </div>
-              <p class="text-gray-400 text-sm">Comprehensive logging of data access</p>
+              <p class="text-gray-400 text-sm">Przetwarzanie jest niezbędne do wypełnienia obowiązku prawnego.</p>
             </div>
-            <div class="bg-white/5 rounded-xl p-4 border border-white/10">
-              <div class="flex items-center gap-3 mb-2">
-                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                </svg>
-                <span class="text-white font-semibold">Staff Training</span>
+            <div class="bg-white/5 rounded-xl p-5 hover:bg-white/10 transition-colors">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-green-500/20 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <strong class="text-white">Uzasadniony interes</strong>
               </div>
-              <p class="text-gray-400 text-sm">Regular GDPR awareness training</p>
+              <p class="text-gray-400 text-sm">Przetwarzanie jest niezbędne dla naszych uzasadnionych interesów lub interesów strony trzeciej.</p>
             </div>
           </div>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">Data Breach Notification</h2>
-          <p class="text-gray-300">
-            In the event of a personal data breach that is likely to result in a risk to your rights and freedoms, we will notify the relevant supervisory authority within 72 hours. If the breach is likely to result in a high risk to your rights and freedoms, we will also notify you directly.
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-6">Środki ochrony danych</h2>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Wdrażamy odpowiednie środki techniczne i organizacyjne zapewniające bezpieczeństwo danych:
+          </p>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white/5 rounded-xl p-5 border border-white/10">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                  </svg>
+                </div>
+                <span class="text-white font-semibold">Szyfrowanie</span>
+              </div>
+              <p class="text-gray-400 text-sm">Dane szyfrowane podczas przesyłania i przechowywania</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-5 border border-white/10">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                  </svg>
+                </div>
+                <span class="text-white font-semibold">Kontrola dostępu</span>
+              </div>
+              <p class="text-gray-400 text-sm">Dostęp do danych oparty na rolach</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-5 border border-white/10">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                  </svg>
+                </div>
+                <span class="text-white font-semibold">Logi audytowe</span>
+              </div>
+              <p class="text-gray-400 text-sm">Kompleksowe rejestrowanie dostępu do danych</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-5 border border-white/10">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                  </svg>
+                </div>
+                <span class="text-white font-semibold">Szkolenia</span>
+              </div>
+              <p class="text-gray-400 text-sm">Regularne szkolenia z zakresu RODO</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-4">Powiadomienie o naruszeniu danych</h2>
+          <p class="text-gray-300 leading-relaxed">
+            W przypadku naruszenia ochrony danych osobowych, które może skutkować ryzykiem dla Twoich praw i wolności, powiadomimy właściwy organ nadzorczy w ciągu 72 godzin. Jeśli naruszenie może skutkować wysokim ryzykiem dla Twoich praw i wolności, powiadomimy Cię również bezpośrednio.
           </p>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">International Data Transfers</h2>
-          <p class="text-gray-300">
-            When we transfer personal data outside the European Economic Area (EEA), we ensure appropriate safeguards are in place, such as Standard Contractual Clauses approved by the European Commission or transfers to countries with an adequacy decision.
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-4">Międzynarodowe transfery danych</h2>
+          <p class="text-gray-300 leading-relaxed">
+            Gdy przekazujemy dane osobowe poza Europejski Obszar Gospodarczy (EOG), zapewniamy odpowiednie zabezpieczenia, takie jak Standardowe Klauzule Umowne zatwierdzone przez Komisję Europejską lub transfery do krajów z decyzją o adekwatności.
           </p>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">Exercise Your Rights</h2>
-          <p class="text-gray-300 mb-4">
-            To exercise any of your rights under GDPR, please contact us using the information below. We will respond to your request within 30 days.
+        <section class="bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl p-8 border border-primary/20">
+          <h2 class="text-2xl font-bold text-white mb-6">Skorzystaj ze swoich praw</h2>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Aby skorzystać z któregokolwiek ze swoich praw wynikających z RODO, skontaktuj się z nami używając poniższych informacji. Odpowiemy na Twoje żądanie w ciągu 30 dni.
           </p>
-          <div class="bg-white/5 rounded-xl p-6 border border-white/10">
-            <p class="text-gray-300 mb-2"><strong class="text-white">Email:</strong> dpo@incode.pl</p>
-            <p class="text-gray-300 mb-4"><strong class="text-white">Subject Line:</strong> GDPR Request - [Your Request Type]</p>
+          <div class="bg-background-dark/50 rounded-xl p-6 border border-white/10">
+            <div class="space-y-3 mb-4">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                <a href="mailto:technical-support@wb-partners.pl" class="text-white font-semibold hover:text-primary transition-colors">technical-support@wb-partners.pl</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                </svg>
+                <span class="text-gray-300">Temat: <span class="text-white">Żądanie RODO - [Rodzaj żądania]</span></span>
+              </div>
+            </div>
             <p class="text-gray-400 text-sm">
-              Please include your full name and enough information for us to verify your identity and locate your personal data.
+              Prosimy o podanie pełnego imienia i nazwiska oraz wystarczających informacji, abyśmy mogli zweryfikować Twoją tożsamość i zlokalizować Twoje dane osobowe.
             </p>
           </div>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">Supervisory Authority</h2>
-          <p class="text-gray-300 mb-4">
-            If you believe we have not handled your personal data properly or have concerns about our data protection practices, you have the right to lodge a complaint with a supervisory authority. In Poland, this is:
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-6">Organ nadzorczy</h2>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Jeśli uważasz, że nie obsłużyliśmy prawidłowo Twoich danych osobowych lub masz obawy dotyczące naszych praktyk ochrony danych, masz prawo złożyć skargę do organu nadzorczego. W Polsce jest to:
           </p>
           <div class="bg-white/5 rounded-xl p-6 border border-white/10">
-            <p class="text-gray-300 mb-2"><strong class="text-white">Urząd Ochrony Danych Osobowych (UODO)</strong></p>
-            <p class="text-gray-300 mb-2">ul. Stawki 2, 00-193 Warszawa</p>
-            <p class="text-gray-300 mb-2">Website: <a href="https://uodo.gov.pl" class="text-primary hover:underline">uodo.gov.pl</a></p>
-            <p class="text-gray-300">Email: kancelaria@uodo.gov.pl</p>
+            <p class="text-white font-bold text-lg mb-3">Urząd Ochrony Danych Osobowych (UODO)</p>
+            <div class="space-y-2 text-gray-300 text-sm">
+              <p>ul. Stawki 2, 00-193 Warszawa</p>
+              <p>Strona: <a href="https://uodo.gov.pl" class="text-primary hover:underline">uodo.gov.pl</a></p>
+              <p>Email: kancelaria@uodo.gov.pl</p>
+            </div>
           </div>
         </section>
       </div>
@@ -205,4 +376,3 @@ import Footer from '../components/Footer.astro';
 
   <Footer />
 </Layout>
-

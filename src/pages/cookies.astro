@@ -4,175 +4,265 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Cookie Policy | InCode">
+<Layout title="Polityka Cookies | InCode">
   <Header />
   
-  <main class="pt-32 pb-20">
-    <div class="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8">
+  <main class="pt-32 pb-20 relative overflow-hidden">
+    <!-- Background with green gradient glow -->
+    <div class="absolute inset-0 bg-background-dark z-0">
+      <div class="absolute top-0 right-1/4 w-[800px] h-[600px] bg-primary/10 rounded-full blur-[180px]"></div>
+      <div class="absolute bottom-1/4 left-0 w-[600px] h-[400px] bg-primary/8 rounded-full blur-[150px]"></div>
+    </div>
+
+    <div class="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Header -->
-      <div class="mb-12">
-        <a href="/" class="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors mb-6">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="mb-16">
+        <a href="/" class="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors mb-8 group">
+          <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
           </svg>
-          Back to Home
+          Powrót do strony głównej
         </a>
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Cookie Policy</h1>
-        <p class="text-gray-400">Last updated: December 11, 2025</p>
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight">Polityka Cookies</h1>
+          </div>
+        </div>
+        <p class="text-gray-400">Ostatnia aktualizacja: 11 grudnia 2025</p>
       </div>
 
       <!-- Content -->
-      <div class="prose prose-invert prose-lg max-w-none">
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">1. What Are Cookies?</h2>
-          <p class="text-gray-300 mb-4">
-            Cookies are small text files that are stored on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and provide information to website owners.
+      <div class="space-y-10">
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">1</span>
+            Czym są pliki cookies?
+          </h2>
+          <p class="text-gray-300 mb-4 leading-relaxed">
+            Pliki cookies to małe pliki tekstowe, które są przechowywane na Twoim komputerze lub urządzeniu mobilnym podczas odwiedzania strony internetowej. Są powszechnie stosowane, aby strony działały efektywniej i dostarczały informacji właścicielom witryn.
           </p>
-          <p class="text-gray-300">
-            Cookies help us understand how you use our website, remember your preferences, and improve your overall experience.
+          <p class="text-gray-300 leading-relaxed">
+            Cookies pomagają nam zrozumieć, jak korzystasz z naszej strony, zapamiętać Twoje preferencje i poprawić ogólne doświadczenie.
           </p>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">2. Types of Cookies We Use</h2>
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">2</span>
+            Rodzaje plików cookies
+          </h2>
           
-          <div class="space-y-6">
-            <div class="bg-white/5 rounded-xl p-6 border border-white/10">
-              <h3 class="text-xl font-semibold text-white mb-3">Essential Cookies</h3>
-              <p class="text-gray-300 mb-2">
-                These cookies are necessary for the website to function properly. They enable basic functions like page navigation and access to secure areas.
+          <div class="grid gap-4">
+            <div class="bg-gradient-to-r from-primary/10 to-transparent rounded-xl p-6 border-l-4 border-primary">
+              <h3 class="text-lg font-semibold text-white mb-2">Niezbędne cookies</h3>
+              <p class="text-gray-300 text-sm mb-2">
+                Te pliki cookies są niezbędne do prawidłowego funkcjonowania strony. Umożliwiają podstawowe funkcje, takie jak nawigacja po stronach i dostęp do bezpiecznych obszarów.
               </p>
-              <p class="text-gray-400 text-sm">Duration: Session</p>
+              <span class="inline-block bg-white/10 rounded-full px-3 py-1 text-xs text-gray-400">Czas trwania: Sesja</span>
             </div>
 
-            <div class="bg-white/5 rounded-xl p-6 border border-white/10">
-              <h3 class="text-xl font-semibold text-white mb-3">Analytics Cookies</h3>
-              <p class="text-gray-300 mb-2">
-                These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.
+            <div class="bg-gradient-to-r from-blue-500/10 to-transparent rounded-xl p-6 border-l-4 border-blue-500">
+              <h3 class="text-lg font-semibold text-white mb-2">Analityczne cookies</h3>
+              <p class="text-gray-300 text-sm mb-2">
+                Te pliki cookies pomagają nam zrozumieć, jak odwiedzający korzystają z naszej strony, zbierając i raportując informacje anonimowo.
               </p>
-              <p class="text-gray-400 text-sm">Duration: Up to 2 years</p>
+              <span class="inline-block bg-white/10 rounded-full px-3 py-1 text-xs text-gray-400">Czas trwania: Do 2 lat</span>
             </div>
 
-            <div class="bg-white/5 rounded-xl p-6 border border-white/10">
-              <h3 class="text-xl font-semibold text-white mb-3">Functional Cookies</h3>
-              <p class="text-gray-300 mb-2">
-                These cookies enable enhanced functionality and personalization, such as remembering your preferences and settings.
+            <div class="bg-gradient-to-r from-purple-500/10 to-transparent rounded-xl p-6 border-l-4 border-purple-500">
+              <h3 class="text-lg font-semibold text-white mb-2">Funkcjonalne cookies</h3>
+              <p class="text-gray-300 text-sm mb-2">
+                Te pliki cookies umożliwiają rozszerzoną funkcjonalność i personalizację, taką jak zapamiętywanie Twoich preferencji i ustawień.
               </p>
-              <p class="text-gray-400 text-sm">Duration: Up to 1 year</p>
+              <span class="inline-block bg-white/10 rounded-full px-3 py-1 text-xs text-gray-400">Czas trwania: Do 1 roku</span>
             </div>
 
-            <div class="bg-white/5 rounded-xl p-6 border border-white/10">
-              <h3 class="text-xl font-semibold text-white mb-3">Marketing Cookies</h3>
-              <p class="text-gray-300 mb-2">
-                These cookies may be set through our site by advertising partners to build a profile of your interests and show relevant ads on other sites.
+            <div class="bg-gradient-to-r from-orange-500/10 to-transparent rounded-xl p-6 border-l-4 border-orange-500">
+              <h3 class="text-lg font-semibold text-white mb-2">Marketingowe cookies</h3>
+              <p class="text-gray-300 text-sm mb-2">
+                Te pliki cookies mogą być ustawiane przez partnerów reklamowych w celu tworzenia profilu Twoich zainteresowań i wyświetlania odpowiednich reklam na innych stronach.
               </p>
-              <p class="text-gray-400 text-sm">Duration: Up to 2 years</p>
+              <span class="inline-block bg-white/10 rounded-full px-3 py-1 text-xs text-gray-400">Czas trwania: Do 2 lat</span>
             </div>
           </div>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">3. Cookie List</h2>
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">3</span>
+            Lista plików cookies
+          </h2>
           <div class="overflow-x-auto">
-            <table class="w-full text-left border-collapse">
+            <table class="w-full text-left">
               <thead>
                 <tr class="border-b border-white/10">
-                  <th class="py-3 pr-4 text-white font-semibold">Cookie Name</th>
-                  <th class="py-3 pr-4 text-white font-semibold">Purpose</th>
-                  <th class="py-3 text-white font-semibold">Duration</th>
+                  <th class="py-4 pr-4 text-white font-semibold text-sm">Nazwa</th>
+                  <th class="py-4 pr-4 text-white font-semibold text-sm">Cel</th>
+                  <th class="py-4 text-white font-semibold text-sm">Czas</th>
                 </tr>
               </thead>
-              <tbody class="text-gray-300">
-                <tr class="border-b border-white/5">
-                  <td class="py-3 pr-4 font-mono text-sm">_ga</td>
-                  <td class="py-3 pr-4">Google Analytics - distinguishes users</td>
-                  <td class="py-3">2 years</td>
+              <tbody class="text-gray-300 text-sm">
+                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                  <td class="py-4 pr-4"><code class="bg-white/10 px-2 py-1 rounded text-primary">_ga</code></td>
+                  <td class="py-4 pr-4">Google Analytics - rozróżnia użytkowników</td>
+                  <td class="py-4">2 lata</td>
                 </tr>
-                <tr class="border-b border-white/5">
-                  <td class="py-3 pr-4 font-mono text-sm">_gid</td>
-                  <td class="py-3 pr-4">Google Analytics - distinguishes users</td>
-                  <td class="py-3">24 hours</td>
+                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                  <td class="py-4 pr-4"><code class="bg-white/10 px-2 py-1 rounded text-primary">_gid</code></td>
+                  <td class="py-4 pr-4">Google Analytics - rozróżnia użytkowników</td>
+                  <td class="py-4">24 godz.</td>
                 </tr>
-                <tr class="border-b border-white/5">
-                  <td class="py-3 pr-4 font-mono text-sm">cookie_consent</td>
-                  <td class="py-3 pr-4">Stores cookie consent preferences</td>
-                  <td class="py-3">1 year</td>
+                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                  <td class="py-4 pr-4"><code class="bg-white/10 px-2 py-1 rounded text-primary">cookie_consent</code></td>
+                  <td class="py-4 pr-4">Przechowuje preferencje zgody na cookies</td>
+                  <td class="py-4">1 rok</td>
                 </tr>
-                <tr class="border-b border-white/5">
-                  <td class="py-3 pr-4 font-mono text-sm">session_id</td>
-                  <td class="py-3 pr-4">Session management</td>
-                  <td class="py-3">Session</td>
+                <tr class="hover:bg-white/5 transition-colors">
+                  <td class="py-4 pr-4"><code class="bg-white/10 px-2 py-1 rounded text-primary">session_id</code></td>
+                  <td class="py-4 pr-4">Zarządzanie sesją</td>
+                  <td class="py-4">Sesja</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">4. Managing Cookies</h2>
-          <p class="text-gray-300 mb-4">
-            You can control and manage cookies in various ways:
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">4</span>
+            Zarządzanie plikami cookies
+          </h2>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Możesz kontrolować i zarządzać plikami cookies na różne sposoby:
           </p>
-          <ul class="list-disc list-inside text-gray-300 space-y-2 mb-4">
-            <li><strong class="text-white">Browser settings:</strong> Most browsers allow you to refuse or accept cookies, delete existing cookies, and set preferences for certain websites.</li>
-            <li><strong class="text-white">Cookie consent banner:</strong> When you first visit our site, you can choose which types of cookies to accept.</li>
-            <li><strong class="text-white">Opt-out links:</strong> For analytics cookies, you can use tools like Google Analytics Opt-out Browser Add-on.</li>
-          </ul>
-          <p class="text-gray-300">
-            Please note that disabling certain cookies may affect the functionality of our website.
-          </p>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">5. Browser-Specific Instructions</h2>
           <div class="space-y-4">
             <div class="flex items-start gap-4">
-              <span class="text-primary">•</span>
+              <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
               <div>
-                <strong class="text-white">Chrome:</strong>
-                <span class="text-gray-300"> Settings → Privacy and Security → Cookies and other site data</span>
+                <strong class="text-white">Ustawienia przeglądarki</strong>
+                <p class="text-gray-400 text-sm mt-1">Większość przeglądarek pozwala odrzucić lub zaakceptować cookies, usunąć istniejące i ustawić preferencje dla określonych stron.</p>
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <span class="text-primary">•</span>
+              <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
               <div>
-                <strong class="text-white">Firefox:</strong>
-                <span class="text-gray-300"> Settings → Privacy & Security → Cookies and Site Data</span>
+                <strong class="text-white">Baner zgody na cookies</strong>
+                <p class="text-gray-400 text-sm mt-1">Przy pierwszej wizycie na naszej stronie możesz wybrać, które rodzaje cookies akceptujesz.</p>
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <span class="text-primary">•</span>
+              <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                </svg>
+              </div>
               <div>
-                <strong class="text-white">Safari:</strong>
-                <span class="text-gray-300"> Preferences → Privacy → Manage Website Data</span>
+                <strong class="text-white">Linki opt-out</strong>
+                <p class="text-gray-400 text-sm mt-1">Dla cookies analitycznych możesz użyć narzędzi jak Google Analytics Opt-out Browser Add-on.</p>
               </div>
             </div>
-            <div class="flex items-start gap-4">
-              <span class="text-primary">•</span>
-              <div>
-                <strong class="text-white">Edge:</strong>
-                <span class="text-gray-300"> Settings → Cookies and site permissions → Cookies and site data</span>
+          </div>
+          <div class="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-xl">
+            <p class="text-yellow-200/80 text-sm">
+              <strong class="text-yellow-200">Uwaga:</strong> Wyłączenie niektórych cookies może wpłynąć na funkcjonalność naszej strony.
+            </p>
+          </div>
+        </section>
+
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">5</span>
+            Instrukcje dla przeglądarek
+          </h2>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white/5 rounded-xl p-4 hover:bg-white/10 transition-colors">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                  <span class="text-blue-400 font-bold text-sm">C</span>
+                </div>
+                <strong class="text-white">Chrome</strong>
               </div>
+              <p class="text-gray-400 text-sm">Ustawienia → Prywatność i bezpieczeństwo → Pliki cookie</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-4 hover:bg-white/10 transition-colors">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-orange-500/20 flex items-center justify-center">
+                  <span class="text-orange-400 font-bold text-sm">F</span>
+                </div>
+                <strong class="text-white">Firefox</strong>
+              </div>
+              <p class="text-gray-400 text-sm">Ustawienia → Prywatność i bezpieczeństwo → Ciasteczka</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-4 hover:bg-white/10 transition-colors">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-gray-500/20 flex items-center justify-center">
+                  <span class="text-gray-400 font-bold text-sm">S</span>
+                </div>
+                <strong class="text-white">Safari</strong>
+              </div>
+              <p class="text-gray-400 text-sm">Preferencje → Prywatność → Zarządzaj danymi witryn</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-4 hover:bg-white/10 transition-colors">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-blue-600/20 flex items-center justify-center">
+                  <span class="text-blue-300 font-bold text-sm">E</span>
+                </div>
+                <strong class="text-white">Edge</strong>
+              </div>
+              <p class="text-gray-400 text-sm">Ustawienia → Pliki cookie i uprawnienia witryn</p>
             </div>
           </div>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">6. Updates to This Policy</h2>
-          <p class="text-gray-300">
-            We may update this Cookie Policy from time to time to reflect changes in our practices or for operational, legal, or regulatory reasons. We encourage you to review this policy periodically.
+        <section class="bg-surface-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5">
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">6</span>
+            Aktualizacje polityki
+          </h2>
+          <p class="text-gray-300 leading-relaxed">
+            Możemy od czasu do czasu aktualizować niniejszą Politykę Cookies, aby odzwierciedlić zmiany w naszych praktykach lub z powodów operacyjnych, prawnych lub regulacyjnych. Zachęcamy do okresowego przeglądania tej polityki.
           </p>
         </section>
 
-        <section class="mb-12">
-          <h2 class="text-2xl font-bold text-white mb-4">7. Contact Us</h2>
-          <p class="text-gray-300 mb-4">
-            If you have any questions about our use of cookies, please contact us:
+        <section class="bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl p-8 border border-primary/20">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/30 flex items-center justify-center text-primary text-sm font-bold">7</span>
+            Kontakt
+          </h2>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Jeśli masz pytania dotyczące naszego wykorzystania plików cookies, skontaktuj się z nami:
           </p>
-          <div class="bg-white/5 rounded-xl p-6 border border-white/10">
-            <p class="text-gray-300 mb-2"><strong class="text-white">InCode sp. z o.o.</strong></p>
-            <p class="text-gray-300 mb-2">Email: privacy@incode.pl</p>
-            <p class="text-gray-300">Address: Poland</p>
+          <div class="bg-background-dark/50 rounded-xl p-6 border border-white/10">
+            <p class="text-white font-bold text-lg mb-4">InCode sp. z o.o.</p>
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                <a href="mailto:technical-support@wb-partners.pl" class="text-gray-300 hover:text-primary transition-colors">technical-support@wb-partners.pl</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <span class="text-gray-300">ul. Słowackiego 24/11, 35-060 Rzeszów</span>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -181,4 +271,3 @@ import Footer from '../components/Footer.astro';
 
   <Footer />
 </Layout>
-
