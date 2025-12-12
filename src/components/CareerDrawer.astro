@@ -1,0 +1,132 @@
+---
+---
+
+<!-- Backdrop overlay (clicking it will close the drawer) -->
+<div id="career-backdrop" class="fixed inset-0 z-40 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+<div id="career-drawer" class="fixed inset-y-0 right-0 z-50 w-full md:w-[420px] transform translate-x-full transition-transform duration-300 ease-in-out">
+  <div class="h-full flex flex-col bg-surface-dark border-l border-white/5 shadow-2xl">
+    <div class="flex items-center justify-between p-6 border-b border-white/5">
+      <h3 class="text-lg font-bold">Kariera w InCode</h3>
+      <button id="career-close" aria-label="Zamknij" class="p-2 text-gray-300 hover:text-white">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+
+    <div class="p-6 overflow-auto">
+      <p class="text-gray-300 mb-4">Szukamy utalentowanych inżynierów. Wybierz ofertę i prześlij swoje CV — skontaktujemy się wkrótce.</p>
+
+      <form id="career-form" class="space-y-4">
+        <div>
+          <label class="text-sm font-medium text-gray-300">Imię i nazwisko</label>
+          <input name="name" required class="w-full mt-1 px-3 py-2 rounded-md bg-background-dark border border-white/10 text-white outline-none focus:border-accent focus:ring-1 focus:ring-accent" />
+        </div>
+
+        <div>
+          <label class="text-sm font-medium text-gray-300">Email</label>
+          <input type="email" name="email" required class="w-full mt-1 px-3 py-2 rounded-md bg-background-dark border border-white/10 text-white outline-none focus:border-accent focus:ring-1 focus:ring-accent" />
+        </div>
+
+        <div>
+          <label class="text-sm font-medium text-gray-300">Telefon (opcjonalnie)</label>
+          <input name="phone" class="w-full mt-1 px-3 py-2 rounded-md bg-background-dark border border-white/10 text-white outline-none focus:border-accent focus:ring-1 focus:ring-accent" />
+        </div>
+
+        <div>
+          <label class="text-sm font-medium text-gray-300">Stanowisko</label>
+          <select name="position" class="w-full mt-1 px-3 py-2 rounded-md bg-background-dark border border-white/10 text-white outline-none focus:border-accent focus:ring-1 focus:ring-accent">
+            <option value="Frontend Developer">Frontend Developer</option>
+            <option value="Fullstack Developer">Fullstack Developer</option>
+            <option value="Backend Developer">Backend Developer</option>
+            <option value="UX/UI Designer">UX/UI Designer</option>
+            <option value="Inne">Inne</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="text-sm font-medium text-gray-300">List motywacyjny / opis</label>
+          <textarea name="message" rows="4" class="w-full mt-1 px-3 py-2 rounded-md bg-background-dark border border-white/10 text-white outline-none focus:border-accent focus:ring-1 focus:ring-accent"></textarea>
+        </div>
+
+        <div>
+          <label class="text-sm font-medium text-gray-300">CV (PDF / DOCX)</label>
+          <input type="file" name="cv" accept=".pdf,.doc,.docx" class="w-full mt-1 text-sm text-gray-300" />
+        </div>
+
+        <div class="flex items-center gap-2">
+          <input type="checkbox" id="consent" name="consent" required class="h-4 w-4 text-accent bg-background-dark border-white/10" />
+          <label for="consent" class="text-sm text-gray-300">Wyrażam zgodę na przetwarzanie danych osobowych w celu rekrutacji.</label>
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full h-12 rounded-full bg-accent hover:bg-[#0d6b3f] text-white font-bold shadow-lg shadow-[#0f7a44]/20 transition-all">Wyślij CV</button>
+        </div>
+      </form>
+
+      <div id="career-status" class="hidden mt-4 text-sm"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const drawer = document.getElementById('career-drawer');
+  const closeBtn = document.getElementById('career-close');
+  const form = document.getElementById('career-form');
+  const status = document.getElementById('career-status');
+
+  function openCareer() {
+    drawer.classList.remove('translate-x-full');
+    drawer.classList.add('translate-x-0');
+    backdrop.classList.remove('opacity-0','pointer-events-none');
+    backdrop.classList.add('opacity-100','pointer-events-auto');
+  }
+
+  function closeCareer() {
+    drawer.classList.remove('translate-x-0');
+    drawer.classList.add('translate-x-full');
+    backdrop.classList.remove('opacity-100','pointer-events-auto');
+    backdrop.classList.add('opacity-0','pointer-events-none');
+  }
+
+  // expose open function globally for header trigger
+  window.openCareer = openCareer;
+
+  closeBtn?.addEventListener('click', closeCareer);
+  const backdrop = document.getElementById('career-backdrop');
+  backdrop?.addEventListener('click', closeCareer);
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeCareer();
+  });
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    const original = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerText = 'Wysyłanie...';
+
+    try {
+      const formData = new FormData(form);
+      // Convert to payload; file upload handled as FormData
+      const resp = await fetch('/api/career', { method: 'POST', body: formData });
+      if (resp.ok) {
+        status.classList.remove('hidden');
+        status.classList.remove('text-red-400');
+        status.classList.add('text-primary');
+        status.innerText = 'Dziękujemy — Twoje CV zostało przesłane.';
+        form.reset();
+      } else {
+        throw new Error('Błąd serwera');
+      }
+    } catch (err) {
+      status.classList.remove('hidden');
+      status.classList.add('text-red-400');
+      status.innerText = 'Wystąpił błąd. Spróbuj ponownie.';
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = original;
+    }
+  });
+</script>

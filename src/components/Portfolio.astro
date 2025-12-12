@@ -11,8 +11,29 @@ const projects = [
     title: 'HealthStream App',
     category: 'MEDTECH',
     description: 'System monitorowania pacjentów dla szpitali.',
-    tags: ['React Native', 'Opieka zdrowotna'],
+    tags: ['React Native', 'Opie zdrowotna'],
     gradient: 'from-emerald-900 to-slate-900',
+  },
+  {
+    title: 'RetailPOS Platform',
+    category: 'RETAIL',
+    description: 'Moduł sprzedażowy i zarządzanie zapasami dla sieci sklepów.',
+    tags: ['Next.js', 'eCommerce'],
+    gradient: 'from-slate-700 to-emerald-900',
+  },
+  {
+    title: 'Learnly LMS',
+    category: 'EDUTECH',
+    description: 'Platforma e-learningowa z analityką postępów.',
+    tags: ['TypeScript', 'SaaS'],
+    gradient: 'from-emerald-800 to-slate-800',
+  },
+  {
+    title: 'LogiTrack',
+    category: 'LOGISTICS',
+    description: 'System śledzenia przesyłek z mapami i powiadomieniami.',
+    tags: ['React', 'Maps'],
+    gradient: 'from-slate-900 to-slate-700',
   },
 ];
 ---
@@ -42,7 +63,7 @@ const projects = [
       <!-- Projects Grid -->
       <div class="relative grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {projects.map((project, index) => (
-          <div class="group cursor-pointer">
+          <div class={`group cursor-pointer ${index >= 2 ? 'extra-project collapsible' : ''}`} data-index={index}>
             <div class="overflow-hidden rounded-2xl mb-5 bg-surface-dark aspect-video relative border border-white/5 group-hover:border-primary/30 transition-all duration-500">
               <div class={`absolute inset-0 bg-gradient-to-tr ${project.gradient} opacity-90 group-hover:scale-110 transition-transform duration-700`}></div>
               
@@ -76,12 +97,31 @@ const projects = [
       </div>
 
       <!-- View All Link -->
-      <div class="relative mt-12 text-center">
-        <a href="#" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-sm font-bold uppercase tracking-wider text-white hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all duration-300">
-          <span>Pokaż wszystkie case studies</span>
-          <span class="material-symbols-outlined text-lg">arrow_forward</span>
-        </a>
-      </div>
+          <div class="relative mt-12 text-center">
+            <button id="view-all-projects" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-sm font-bold uppercase tracking-wider text-white hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all duration-300">
+              <span id="view-all-text">Pokaż wszystkie case studies</span>
+              <span id="view-all-icon" class="material-symbols-outlined text-lg">arrow_forward</span>
+            </button>
+          </div>
     </div>
   </div>
 </section>
+
+<script>
+  const btn = document.getElementById('view-all-projects');
+  const extras = Array.from(document.querySelectorAll('.extra-project'));
+  const text = document.getElementById('view-all-text');
+  const icon = document.getElementById('view-all-icon');
+  let open = false;
+
+  btn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    open = !open;
+    extras.forEach((el, i) => {
+      // add slight stagger for nicer effect
+      setTimeout(() => el.classList.toggle('open', open), i * 50);
+    });
+    text.innerText = open ? 'Pokaż mniej' : 'Pokaż wszystkie case studies';
+    icon.style.transform = open ? 'rotate(180deg)' : 'rotate(0deg)';
+  });
+</script>

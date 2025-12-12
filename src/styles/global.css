@@ -43,10 +43,26 @@
     background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, transparent 100%);
   }
 
-  /* Accent dot decorator */
+  /* Accent LED-style fading divider (replaces dot) */
   .section-accent::before {
     content: '';
-    @apply absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary;
-    box-shadow: 0 0 20px rgba(48, 232, 122, 0.6), 0 0 40px rgba(48, 232, 122, 0.3);
+    @apply absolute top-0 left-1/2 -translate-x-1/2 h-px w-full max-w-[600px];
+    background: linear-gradient(90deg, transparent, rgba(15,122,68,0.6), transparent);
+    box-shadow: 0 0 30px rgba(15,122,68,0.25);
+  }
+
+  /* Collapsible project animation used in Portfolio component */
+  .collapsible {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-8px);
+    overflow: hidden;
+    transition: max-height 450ms ease, opacity 350ms ease, transform 350ms ease;
+  }
+
+  .collapsible.open {
+    max-height: 1200px; /* large enough to fit content */
+    opacity: 1;
+    transform: translateY(0);
   }
 }

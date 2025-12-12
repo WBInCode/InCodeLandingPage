@@ -10,7 +10,8 @@ export default {
         'background-dark': '#112117',
         'surface-dark': '#1c2620',
         'surface-dark-lighter': '#243029',
-        accent: '#FF5E00',
+        // changed accent from orange to a dark green to match site theme
+        accent: '#0f7a44',
       },
       fontFamily: {
         display: ['Spline Sans', 'sans-serif'],
