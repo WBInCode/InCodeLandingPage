@@ -9,41 +9,38 @@ const navLinks = [
 
 <header class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md">
   <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex h-16 items-center justify-between">
+    <div class="flex h-16 items-center">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2">
+      <a href="/" class="flex items-center gap-2 flex-shrink-0">
         <img src="/img/InCodeLogo.png" alt="InCode Logo" class="h-8 w-auto" />
       </a>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center gap-8">
-        {navLinks.map((link) => (
-          link.label === 'Kariera' ? (
-            <a 
-              id="career-link"
-              href="#"
-              class="text-sm font-medium text-gray-300 hover:text-primary transition-colors"
-            >
-              {link.label}
-            </a>
-          ) : (
-            <a 
-              href={link.href}
-              class="text-sm font-medium text-gray-300 hover:text-primary transition-colors"
-            >
-              {link.label}
-            </a>
-          )
-        ))}
-      </nav>
-
-      <!-- CTA Button & Mobile Menu -->
-      <div class="flex items-center gap-4">
+      <!-- Right side: nav + CTA -->
+      <div class="flex flex-1 items-center justify-end gap-8">
+        <nav class="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            link.label === 'Kariera' ? (
+              <a 
+                id="career-link"
+                href="#"
+                class="text-sm font-medium text-gray-300 hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <a 
+                href={link.href}
+                class="text-sm font-medium text-gray-300 hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            )
+          ))}
+        </nav>
         <a 
           href="/#contact" 
           class="hidden sm:flex items-center justify-center h-9 px-4 rounded-full bg-primary text-background-dark text-sm font-bold hover:brightness-110 transition-all"
         >
-          Wycena
+          Zaczniijmy projekt
         </a>
         <button 
           id="mobile-menu-btn"
