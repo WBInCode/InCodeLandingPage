@@ -1,0 +1,113 @@
+---
+const team = [
+  {
+    name: 'Miłosz Wiater',
+    role: 'CEO & Full Stack Developer',
+    specialization: 'Next.js, React, TypeScript',
+    avatar: '👨‍💻',
+    bio: 'Pasjonat nowoczesnych technologii web. Odpowiada za architekturę, performance optimization i strategię firmy.',
+  },
+  {
+    name: 'Jakub Maziarz',
+    role: 'Frontend Developer',
+    specialization: 'React, UI/UX, Tailwind CSS',
+    avatar: '👨‍🎨',
+    bio: 'Specjalista w tworzeniu pięknych, responsywnych interfejsów. Dbałość o detale i doświadczenie użytkownika.',
+  },
+  {
+    name: 'Jakub Sosnowski',
+    role: 'Full Stack Developer',
+    specialization: 'Node.js, Databases, DevOps',
+    avatar: '👨‍🔧',
+    bio: 'Buduje skalowalne rozwiązania backendowe i dba o infrastrukturę. Ekspert w optymalizacji i bezpieczeństwie.',
+  },
+];
+---
+
+<section id="team" class="py-24 section-divider">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Main container -->
+    <div class="relative rounded-[2.5rem] bg-white/[0.02] backdrop-blur-sm border border-white/[0.06] p-8 md:p-12 lg:p-16 overflow-hidden">
+      <!-- Decorative elements -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-primary/10 rounded-full blur-[100px]"></div>
+      <div class="absolute bottom-0 right-0 w-[300px] h-[300px] bg-primary/5 rounded-full blur-[100px] translate-x-1/4 translate-y-1/4"></div>
+      
+      <!-- Corner accents -->
+      <div class="absolute top-6 left-6 w-16 h-16 border-l-2 border-t-2 border-primary/20 rounded-tl-2xl"></div>
+      <div class="absolute bottom-6 right-6 w-16 h-16 border-r-2 border-b-2 border-primary/20 rounded-br-2xl"></div>
+
+      <!-- Section Header -->
+      <div class="relative text-center mb-16">
+        <span class="inline-flex items-center gap-2 text-primary font-bold tracking-wider uppercase text-xs mb-4">
+          <span class="w-8 h-px bg-primary"></span>
+          Nasz zespół
+          <span class="w-8 h-px bg-primary"></span>
+        </span>
+        <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white">Młody, ambitny zespół ekspertów</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+          Każdy z nas to pasjonat swojej specjalizacji. Razem tworzymy rozwiązania, które zmieniają biznes. Łączą nas cechy: ambicja, rzetelność i ciągłe uczenie się.
+        </p>
+      </div>
+
+      <!-- Team Grid - 3 columns filling whole width -->
+      <div class="relative grid grid-cols-1 md:grid-cols-3 gap-6">
+        {team.map((member) => (
+          <div class="group relative rounded-2xl bg-white/[0.03] border border-white/[0.06] p-8 hover:border-primary/30 hover:bg-white/[0.05] transition-all duration-500 flex flex-col">
+            <!-- Hover gradient -->
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+
+            <!-- Avatar -->
+            <div class="relative z-10 w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center mb-5 group-hover:from-primary/40 group-hover:to-primary/20 transition-all duration-300 text-5xl mx-auto">
+              {member.avatar}
+            </div>
+
+            <!-- Content -->
+            <div class="relative z-10 flex flex-col flex-grow text-center">
+              <h3 class="text-xl font-bold text-white mb-1 group-hover:text-primary transition-colors">
+                {member.name}
+              </h3>
+              <p class="text-primary text-sm font-semibold mb-4">
+                {member.role}
+              </p>
+              <p class="text-xs bg-white/5 border border-white/10 rounded-lg px-4 py-2 mb-4 text-gray-300 inline-block mx-auto">
+                {member.specialization}
+              </p>
+              <p class="text-gray-400 text-sm leading-relaxed flex-grow">
+                {member.bio}
+              </p>
+            </div>
+
+            <!-- Social links (decorative) -->
+            <div class="relative z-10 flex gap-3 mt-5 pt-5 border-t border-white/10 justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <button class="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary transition-all text-sm font-bold">
+                in
+              </button>
+              <button class="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary transition-all text-sm font-bold">
+                gh
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Bottom text -->
+      <div class="relative mt-16 text-center p-8 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
+        <p class="text-gray-400 leading-relaxed">
+          <span class="text-white font-bold">To tylko początek naszej historii.</span> Szukamy pasjonatów, którzy chcą rosnąć razem z nami. Jeśli jesteś zainteresowany dołączeniem do zespołu WB InCode, <button id="team-career-btn" class="text-primary hover:underline bg-transparent border-none cursor-pointer">skontaktuj się z nami</button>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const teamCareerBtn = document.getElementById('team-career-btn');
+  const drawer = document.getElementById('career-drawer');
+  const backdrop = document.getElementById('career-backdrop');
+
+  teamCareerBtn?.addEventListener('click', () => {
+    drawer?.classList.remove('translate-x-full');
+    backdrop?.classList.remove('opacity-0', 'pointer-events-none');
+    backdrop?.classList.add('opacity-100', 'pointer-events-auto');
+  });
+</script>

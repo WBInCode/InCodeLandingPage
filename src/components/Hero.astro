@@ -1,9 +1,9 @@
 ---
 const technologies = [
-  { icon: 'code', name: 'Next.js 14' },
-  { icon: 'data_object', name: 'TypeScript' },
-  { icon: 'brush', name: 'Tailwind CSS' },
-  { icon: 'cloud', name: 'Vercel' },
+  { icon: 'code', name: 'Next.js 14', color: '#000000', textColor: '#FFFFFF', borderColor: '#333333' },
+  { icon: 'data_object', name: 'TypeScript', color: '#3178C6', textColor: '#FFFFFF', borderColor: '#3178C6' },
+  { icon: 'brush', name: 'Tailwind CSS', color: '#06B6D4', textColor: '#FFFFFF', borderColor: '#06B6D4' },
+  { icon: 'cloud', name: 'Vercel', color: '#000000', textColor: '#FFFFFF', borderColor: '#333333' },
 ];
 ---
 
@@ -39,9 +39,12 @@ const technologies = [
     </div>
 
     <!-- Technology Tags -->
-    <div class="mt-16 flex flex-wrap justify-center gap-3 opacity-80">
+    <div class="mt-16 flex flex-wrap justify-center gap-3">
       {technologies.map((tech) => (
-        <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 shadow-sm text-white">
+        <div 
+          class="flex items-center gap-2 px-4 py-2 rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
+          style={`background-color: ${tech.color}; border: 1px solid ${tech.borderColor}; color: ${tech.textColor};`}
+        >
           <span class="material-symbols-outlined text-base">{tech.icon}</span>
           <span class="text-sm font-medium">{tech.name}</span>
         </div>
