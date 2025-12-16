@@ -68,6 +68,40 @@
   </div>
 </div>
 
+<!-- Success Popup -->
+<div id="career-success-popup" class="fixed inset-0 z-[60] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+  <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+  <div class="relative bg-surface-dark border border-white/10 rounded-3xl p-8 max-w-md mx-4 transform scale-95 transition-transform duration-300" id="career-popup-content">
+    <!-- Success icon -->
+    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 flex items-center justify-center">
+      <div class="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-emerald-600 flex items-center justify-center shadow-lg shadow-primary/30">
+        <span class="material-symbols-outlined text-white text-3xl">check</span>
+      </div>
+    </div>
+    
+    <!-- Content -->
+    <div class="text-center">
+      <h3 class="text-2xl font-bold text-white mb-2">Dziękujemy za zgłoszenie!</h3>
+      <p class="text-gray-400 mb-6">Twoje CV zostało pomyślnie przesłane. Nasz zespół HR skontaktuje się z Tobą wkrótce.</p>
+      
+      <!-- Decorative line -->
+      <div class="flex items-center justify-center gap-2 mb-6">
+        <div class="w-8 h-px bg-gradient-to-r from-transparent to-primary/50"></div>
+        <div class="w-2 h-2 rounded-full bg-primary/50"></div>
+        <div class="w-8 h-px bg-gradient-to-l from-transparent to-primary/50"></div>
+      </div>
+      
+      <button id="career-popup-close" class="px-8 py-3 rounded-full bg-gradient-to-r from-primary to-emerald-600 hover:from-primary/90 hover:to-emerald-600/90 text-white font-bold transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40">
+        Zamknij
+      </button>
+    </div>
+    
+    <!-- Corner decorations -->
+    <div class="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-primary/20 rounded-tl-xl"></div>
+    <div class="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-primary/20 rounded-br-xl"></div>
+  </div>
+</div>
+
 <script>
   const drawer = document.getElementById('career-drawer');
   const closeBtn = document.getElementById('career-close');
@@ -107,26 +141,43 @@
     btn.disabled = true;
     btn.innerText = 'Wysyłanie...';
 
-    try {
-      const formData = new FormData(form);
-      // Convert to payload; file upload handled as FormData
-      const resp = await fetch('/api/career', { method: 'POST', body: formData });
-      if (resp.ok) {
-        status.classList.remove('hidden');
-        status.classList.remove('text-red-400');
-        status.classList.add('text-primary');
-        status.innerText = 'Dziękujemy — Twoje CV zostało przesłane.';
-        form.reset();
-      } else {
-        throw new Error('Błąd serwera');
-      }
-    } catch (err) {
-      status.classList.remove('hidden');
-      status.classList.add('text-red-400');
-      status.innerText = 'Wystąpił błąd. Spróbuj ponownie.';
-    } finally {
-      btn.disabled = false;
-      btn.innerHTML = original;
+    // Simulate sending (since no backend)
+    await new Promise(resolve => setTimeout(resolve, 1500));
+
+    // Show success popup
+    const popup = document.getElementById('career-success-popup');
+    const popupContent = document.getElementById('career-popup-content');
+    
+    popup.classList.remove('opacity-0', 'pointer-events-none');
+    popup.classList.add('opacity-100', 'pointer-events-auto');
+    popupContent.classList.remove('scale-95');
+    popupContent.classList.add('scale-100');
+    
+    form.reset();
+    btn.disabled = false;
+    btn.innerHTML = original;
+    
+    // Close drawer
+    closeCareer();
+  });
+
+  // Popup close handlers
+  const popupCloseBtn = document.getElementById('career-popup-close');
+  const successPopup = document.getElementById('career-success-popup');
+  
+  function closeSuccessPopup() {
+    const popup = document.getElementById('career-success-popup');
+    const popupContent = document.getElementById('career-popup-content');
+    popup.classList.remove('opacity-100', 'pointer-events-auto');
+    popup.classList.add('opacity-0', 'pointer-events-none');
+    popupContent.classList.remove('scale-100');
+    popupContent.classList.add('scale-95');
+  }
+  
+  popupCloseBtn?.addEventListener('click', closeSuccessPopup);
+  successPopup?.addEventListener('click', (e) => {
+    if (e.target === successPopup || e.target.classList.contains('backdrop-blur-sm')) {
+      closeSuccessPopup();
     }
   });
 </script>
