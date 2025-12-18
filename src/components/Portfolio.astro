@@ -32,10 +32,12 @@ const projects = [
   },
   {
     title: 'Learnly LMS',
-    category: 'EDUTECH',
+    category: '',
     description: 'Platforma e-learningowa z analityką postępów.',
-    tags: ['TypeScript', 'SaaS'],
+    tags: ['EdTech', 'SaaS'],
     gradient: 'from-emerald-800 to-slate-800',
+    link: 'https://learnly-lms-opal.vercel.app/',
+    hasPreview: 'learnly',
   },
   {
     title: 'LogiTrack',
@@ -85,7 +87,7 @@ const projects = [
               <div class="overflow-hidden rounded-2xl mb-5 bg-surface-dark aspect-video relative border border-white/5 group-hover:border-primary/30 transition-all duration-500">
                 
                 <!-- Mini preview for Etui App - full bleed -->
-                {project.hasPreview ? (
+                {project.hasPreview === true ? (
                   <div class="absolute inset-0 bg-[#0a0a0a] flex flex-col">
                     <!-- Top bar with logo -->
                     <div class="px-4 py-2 flex items-center justify-between border-b border-white/5">
@@ -134,6 +136,67 @@ const projects = [
                       <div class="flex-1 max-w-[120px] bg-white/5 rounded-xl p-3 border border-white/10">
                         <div class="text-[8px] text-white/80 font-medium">Szybka dostawa</div>
                         <div class="text-[7px] text-white/30 mt-0.5">Na cały świat</div>
+                      </div>
+                    </div>
+                    <!-- Hover overlay -->
+                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500 pointer-events-none"></div>
+                  </div>
+                ) : project.hasPreview === 'learnly' ? (
+                  <div class="absolute inset-0 bg-gradient-to-br from-[#0f172a] to-[#1e293b] flex">
+                    <!-- Left side - Hero -->
+                    <div class="flex-1 flex flex-col justify-center px-6 py-4">
+                      <!-- Logo -->
+                      <div class="flex items-center gap-2 mb-4">
+                        <div class="w-6 h-6 rounded-lg bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+                          <span class="text-[10px] text-white font-bold">L</span>
+                        </div>
+                        <span class="text-[12px] text-white font-semibold">Learnly</span>
+                      </div>
+                      <!-- Headline -->
+                      <div class="text-lg md:text-xl lg:text-2xl text-white font-bold leading-tight mb-2">
+                        Opanuj nowe<br/>umiejętności,<br/><span class="text-emerald-400">krok po kroku.</span>
+                      </div>
+                      <div class="text-[8px] text-white/50 mb-3 max-w-[180px]">Dołącz do ponad 100 000 uczniów na najbardziej intuicyjnej platformie.</div>
+                      <!-- Stats -->
+                      <div class="flex gap-3">
+                        <div class="text-center">
+                          <div class="text-[12px] text-white font-bold">120+</div>
+                          <div class="text-[6px] text-white/40 uppercase">Kursów</div>
+                        </div>
+                        <div class="text-center">
+                          <div class="text-[12px] text-white font-bold">50k+</div>
+                          <div class="text-[6px] text-white/40 uppercase">Uczniów</div>
+                        </div>
+                        <div class="text-center">
+                          <div class="text-[12px] text-white font-bold">4.9</div>
+                          <div class="text-[6px] text-white/40 uppercase">Ocena</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Right side - Login form -->
+                    <div class="w-[45%] flex items-center justify-center p-4">
+                      <div class="w-full max-w-[160px] bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
+                        <div class="text-[10px] text-white font-semibold mb-1">Witaj ponownie</div>
+                        <div class="text-[7px] text-white/40 mb-3">Wprowadź dane logowania</div>
+                        <!-- Email input -->
+                        <div class="bg-white/5 rounded-lg px-2 py-1.5 mb-2 border border-white/10">
+                          <div class="text-[6px] text-white/30">Adres e-mail</div>
+                          <div class="text-[7px] text-white/60">user@example.com</div>
+                        </div>
+                        <!-- Password input -->
+                        <div class="bg-white/5 rounded-lg px-2 py-1.5 mb-3 border border-white/10">
+                          <div class="text-[6px] text-white/30">Hasło</div>
+                          <div class="text-[7px] text-white/60">•••••••••</div>
+                        </div>
+                        <!-- Login button -->
+                        <div class="bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-lg py-1.5 text-center">
+                          <span class="text-[8px] text-white font-medium">Zaloguj się</span>
+                        </div>
+                        <!-- Google login -->
+                        <div class="mt-2 bg-white/5 rounded-lg py-1.5 text-center border border-white/10 flex items-center justify-center gap-1">
+                          <div class="w-3 h-3 rounded-full bg-white/20"></div>
+                          <span class="text-[7px] text-white/60">Zaloguj przez Google</span>
+                        </div>
                       </div>
                     </div>
                     <!-- Hover overlay -->
