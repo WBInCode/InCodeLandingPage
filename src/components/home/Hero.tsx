@@ -18,10 +18,6 @@ export default function Hero() {
             {/* Dynamic Background Grid */}
             <RetroGrid />
 
-            {/* Large Decorative Logo in Background */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.03] pointer-events-none z-0 select-none grayscale rotate-12">
-                <img src="/img/InCodeLogo.png" alt="" className="w-full h-full object-contain" />
-            </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
 

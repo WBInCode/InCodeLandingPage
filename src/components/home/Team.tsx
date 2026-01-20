@@ -118,8 +118,11 @@ export default function Team() {
                         </div>
                     </motion.div>
 
+                    {/* Mobile Connecting Line (Vertical) - connects Leader to Members */}
+                    <div className="absolute top-[280px] bottom-10 left-1/2 -translate-x-1/2 w-0.5 bg-gradient-to-b from-primary/50 to-transparent md:hidden z-0"></div>
+
                     {/* Level 2: Members */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl px-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl px-4 relative z-10">
                         {members.map((member, index) => (
                             <motion.div
                                 key={member.name}
@@ -129,8 +132,13 @@ export default function Team() {
                                 transition={{ delay: index * 0.2 }}
                                 className="relative flex flex-col items-center"
                             >
-                                {/* Mobile Connector */}
-                                <div className="md:hidden w-px h-10 bg-gradient-to-b from-white/10 to-transparent mb-4"></div>
+                                {/* Mobile Horizontal Connector (Branch) */}
+                                <div className="md:hidden absolute -top-8 left-0 right-0 h-px bg-transparent">
+                                    {/* This creates a horizontal connector feeling on mobile if needed, or we just rely on vertical stacking */}
+                                </div>
+
+                                {/* Mobile Vertical Connector from Main Line to Card */}
+                                <div className="md:hidden absolute -top-8 left-1/2 -translate-x-1/2 w-0.5 h-8 bg-gradient-to-b from-primary/20 to-white/10"></div>
 
                                 <div className={`w-full group hover:-translate-y-2 transition-transform duration-500`}>
                                     <div className={`h-full p-6 rounded-2xl bg-surface/40 backdrop-blur-sm border border-white/5 hover:border-white/10 transition-all duration-300 relative overflow-hidden`}>
