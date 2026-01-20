@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -49,14 +49,6 @@ export default function Footer() {
                                 <a href="mailto:support@wb-partners.pl" className="flex items-center gap-2 text-gray-400 text-sm hover:text-primary transition-colors">
                                     <Mail size={16} />
                                     support@wb-partners.pl
-                                </a>
-                            </li>
-                            <li className="flex gap-4 mt-4">
-                                <a href="#" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-background-dark transition-all">
-                                    <Github size={16} />
-                                </a>
-                                <a href="#" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-background-dark transition-all">
-                                    <Linkedin size={16} />
                                 </a>
                             </li>
                         </ul>
