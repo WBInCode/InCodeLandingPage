@@ -103,8 +103,8 @@ export default function Team() {
                         className="match-structure relative z-20 mb-20 md:mb-32"
                     >
                         <div className="relative group">
-                            {/* Hover Glow Effect - Fixed Shape */}
-                            <div className={`absolute -inset-0.5 rounded-3xl bg-gradient-to-b from-primary/80 via-emerald-400/20 to-primary/80 opacity-0 group-hover:opacity-100 blur-[2px] transition duration-500`} />
+                            {/* Hover Border Effect - Subtle */}
+                            <div className={`absolute -inset-[1px] rounded-[26px] bg-gradient-to-b from-primary/30 via-transparent to-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
                             <div className="relative w-72 p-1 rounded-3xl bg-surface-dark">
                                 <div className="rounded-[1.3rem] bg-surface-dark border border-white/10 p-6 flex flex-col items-center text-center overflow-hidden relative">
                                     <div className={`absolute inset-0 bg-gradient-to-b ${leader.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
