@@ -26,12 +26,12 @@ const projects = [
         icon: Monitor
     },
     {
-        title: "WB Partners",
-        category: "Corporate Website",
-        description: "Nowoczesna strona wizytówka dla partnera biznesowego. Minimalistyczny design i wysoka wydajność.",
-        tags: ["Next.js", "Tailwind", "Corporate"],
+        title: "WB Rent",
+        category: "Car Rental Platform",
+        description: "Nowoczesna platforma do wynajmu samochodów. System rezerwacji, zarządzanie flotą i panel klienta.",
+        tags: ["Next.js", "Tailwind", "Booking System"],
         gradient: "from-blue-600 to-cyan-500",
-        link: "https://wb-partners.pl",
+        link: "https://wb-rent.pl",
         color: "#3b82f6",
         icon: Globe
     },

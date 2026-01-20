@@ -51,7 +51,7 @@ export default function Team() {
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
 
             {/* Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] pointer-events-none opacity-50" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-20">
@@ -103,7 +103,7 @@ export default function Team() {
                         className="match-structure relative z-20 mb-20 md:mb-32"
                     >
                         <div className="relative group">
-                            <div className={`absolute -inset-1 rounded-full bg-gradient-to-r from-primary via-emerald-500 to-primary opacity-20 group-hover:opacity-50 blur transition duration-500 animate-gradient-x`}></div>
+                            <div className={`absolute -inset-1 rounded-full bg-gradient-to-r from-primary via-emerald-500 to-primary opacity-0 group-hover:opacity-100 transition duration-500 animate-[spin_4s_linear_infinite]`} />
                             <div className="relative w-72 p-1 rounded-3xl bg-surface-dark">
                                 <div className="rounded-[1.3rem] bg-surface-dark border border-white/10 p-6 flex flex-col items-center text-center overflow-hidden relative">
                                     <div className={`absolute inset-0 bg-gradient-to-b ${leader.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />

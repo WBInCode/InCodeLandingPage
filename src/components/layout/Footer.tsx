@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail } from "lucide-react";
+import { Mail, Globe } from "lucide-react";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -49,6 +49,12 @@ export default function Footer() {
                                 <a href="mailto:support@wb-partners.pl" className="flex items-center gap-2 text-gray-400 text-sm hover:text-primary transition-colors">
                                     <Mail size={16} />
                                     support@wb-partners.pl
+                                </a>
+                            </li>
+                            <li className="mt-4 pt-4 border-t border-white/5">
+                                <a href="https://wb-partners.pl" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 text-xs hover:text-white transition-colors group">
+                                    <Globe size={14} className="group-hover:text-blue-400 transition-colors" />
+                                    <span>Part of WB Partners Group</span>
                                 </a>
                             </li>
                         </ul>
