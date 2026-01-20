@@ -26,10 +26,11 @@ export default function CareerSidebar({ isOpen, onClose }: CareerSidebarProps) {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setFormState("submitting");
+        const form = e.currentTarget;
 
-        const formData = new FormData(e.currentTarget);
+        const formData = new FormData(form);
         // Explicitly check for checkbox because sometimes browsers are weird with uncontrolled form data in React
-        if (!e.currentTarget.gdprConsent.checked) {
+        if (!(form.elements.namedItem('gdprConsent') as HTMLInputElement).checked) {
             formData.set('gdprConsent', '');
         } else {
             formData.set('gdprConsent', 'on');
@@ -44,7 +45,7 @@ export default function CareerSidebar({ isOpen, onClose }: CareerSidebarProps) {
             if (!response.ok) throw new Error("Failed to send application");
 
             setFormState("success");
-            e.currentTarget.reset();
+            form.reset();
             setFileName(null);
         } catch (error) {
             console.error(error);

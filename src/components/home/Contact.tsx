@@ -12,8 +12,9 @@ export default function Contact() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setFormState("submitting");
+        const form = e.currentTarget;
 
-        const formData = new FormData(e.currentTarget);
+        const formData = new FormData(form);
         const data = {
             name: formData.get("name"),
             email: formData.get("email"),
@@ -31,7 +32,7 @@ export default function Contact() {
             if (!response.ok) throw new Error("Failed to send message");
 
             setFormState("success");
-            e.currentTarget.reset();
+            form.reset();
         } catch (error) {
             console.error(error);
             alert("Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie lub napisz bezpośrednio na maila.");
