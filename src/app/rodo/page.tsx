@@ -7,7 +7,7 @@ export default function RODO() {
                 <section>
                     <h2 className="text-2xl font-bold text-white mb-4">Nasze zobowiązanie wobec RODO</h2>
                     <p>
-                        InCode sp. z o.o. jest w pełni zaangażowana w przestrzeganie Ogólnego Rozporządzenia o Ochronie Danych (RODO).
+                        WB PARTNERS Sp. z o.o. jest w pełni zaangażowana w przestrzeganie Ogólnego Rozporządzenia o Ochronie Danych (RODO).
                         Jako firma z siedzibą w Polsce, stosujemy najwyższe standardy ochrony danych i prywatności dla wszystkich osób w Unii Europejskiej.
                     </p>
                     <p className="mt-4">
@@ -18,16 +18,17 @@ export default function RODO() {
                 <section>
                     <h2 className="text-2xl font-bold text-white mb-4">Informacje o Administratorze Danych</h2>
                     <div className="bg-surface border border-white/10 p-6 rounded-2xl">
-                        <strong className="block text-white mb-1">Administrator Danych</strong>
-                        <p className="mb-4">InCode sp. z o.o.</p>
-
-                        <strong className="block text-white mb-1">Email kontaktowy</strong>
-                        <a href="mailto:support@wb-partners.pl" className="text-primary hover:underline mb-4 block">support@wb-partners.pl</a>
+                        <strong className="block text-white mb-1"></strong>
+                        <p className="mb-4">WB PARTNERS Sp. z o.o.</p>
 
                         <strong className="block text-white mb-1">Adres</strong>
                         <p className="mb-4">ul. Słowackiego 24/11<br />35-060 Rzeszów</p>
 
-                        <strong className="block text-white mb-1">Inspektor Ochrony Danych</strong>
+                        <strong className="block text-white mb-1">Email kontaktowy</strong>
+                        <a href="mailto:support@wb-partners.pl" className="text-primary hover:underline mb-4 block">support@wb-partners.pl</a>
+
+                        <strong className="block text-white mb-1">Telefon kontaktowy</strong>
+                        <a href="tel:+48 570 028 761" className="text-primary hover:underline mb-4 block">+48 570 028 761</a>
                         <p>Dostępny na życzenie</p>
                     </div>
                 </section>
