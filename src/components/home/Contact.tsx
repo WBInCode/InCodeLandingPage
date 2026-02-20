@@ -144,10 +144,13 @@ export default function Contact() {
                                 </div>
 
                                 <div className="col-span-2 mt-4 flex justify-between items-center group">
-                                    <a href="mailto:support@wb-partners.pl" className="hidden md:flex items-center gap-2 text-sm text-gray-500 hover:text-white transition-colors">
-                                        <Mail size={16} />
-                                        lub napisz bezpośrednio
-                                    </a>
+                                    <div className="hidden md:flex flex-col gap-1">
+                                        <a href="mailto:technical-support@wb-partners.pl" className="flex items-center gap-2 text-sm text-gray-500 hover:text-white transition-colors">
+                                            <Mail size={16} />
+                                            lub napisz bezpośrednio
+                                        </a>
+                                        <span className="text-xs text-gray-600 ml-6">Pon–Pią 9:00–17:00</span>
+                                    </div>
                                     <button
                                         type="submit"
                                         disabled={formState === "submitting"}

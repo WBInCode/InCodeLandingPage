@@ -25,11 +25,15 @@ export default function RODO() {
                         <p className="mb-4">ul. Słowackiego 24/11<br />35-060 Rzeszów</p>
 
                         <strong className="block text-white mb-1">Email kontaktowy</strong>
-                        <a href="mailto:support@wb-partners.pl" className="text-primary hover:underline mb-4 block">support@wb-partners.pl</a>
+                        <a href="mailto:technical-support@wb-partners.pl" className="text-primary hover:underline mb-4 block">technical-support@wb-partners.pl</a>
 
                         <strong className="block text-white mb-1">Telefon kontaktowy</strong>
-                        <a href="tel:+48 570 028 761" className="text-primary hover:underline mb-4 block">+48 570 028 761</a>
-                        <p>Dostępny na życzenie</p>
+                        <a href="tel:+48 570 034 367" className="text-primary hover:underline mb-4 block">+48 570 034 367</a>
+
+                        <strong className="block text-white mb-1">Dane rejestrowe</strong>
+                        <p className="mb-1">NIP: 5170455185</p>
+                        <p className="mb-1">REGON: 540735769</p>
+                        <p>KRS: 0001151642</p>
                     </div>
                 </section>
 
@@ -91,7 +95,7 @@ export default function RODO() {
                     <p className="mb-4">
                         Aby skorzystać z któregokolwiek ze swoich praw wynikających z RODO, skontaktuj się z nami używając poniższych informacji. Odpowiemy na Twoje żądanie w ciągu 30 dni.
                     </p>
-                    <a href="mailto:support@wb-partners.pl" className="text-primary hover:underline block mb-2">support@wb-partners.pl</a>
+                    <a href="mailto:technical-support@wb-partners.pl" className="text-primary hover:underline block mb-2">technical-support@wb-partners.pl</a>
                     <p className="text-sm text-gray-500">
                         Prosimy o podanie pełnego imienia i nazwiska oraz wystarczających informacji, abyśmy mogli zweryfikować Twoją tożsamość i zlokalizować Twoje dane osobowe.
                     </p>

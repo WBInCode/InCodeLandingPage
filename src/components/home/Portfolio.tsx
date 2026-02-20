@@ -16,14 +16,14 @@ const projects = [
         icon: Smartphone
     },
     {
-        title: "Learnly LMS",
-        category: "EdTech Platform",
-        description: "Platforma e-learningowa z systemem kursów, śledzeniem postępów i grywalizacją.",
-        tags: ["SaaS", "Next.js", "Stripe", "Video"],
+        title: "AcroClinic Shop",
+        category: "eCommerce Store",
+        description: "Sklep internetowy z premium sportswear i akcesoriami dla pasjonatów akrobatyki. System koszyka, logowania i zarządzania zamówieniami.",
+        tags: ["Next.js", "eCommerce", "Tailwind", "Auth"],
         gradient: "from-emerald-600 to-teal-600",
-        link: "https://learnly-lms-opal.vercel.app/",
+        link: "https://acroclinic-shop.vercel.app/",
         color: "#10b981",
-        icon: Monitor
+        icon: Globe
     },
     {
         title: "WB Rent",

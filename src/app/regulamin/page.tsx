@@ -8,7 +8,7 @@ export default function TermsOfService() {
                 <section>
                     <h2 className="text-2xl font-bold text-white mb-4">1. Akceptacja warunków</h2>
                     <p>
-                        Korzystając z usług świadczonych przez InCode sp. z o.o. („Firma”, „my”, „nas” lub „nasz”), zgadzasz się na przestrzeganie niniejszych Warunków Korzystania („Warunki”).
+                        Korzystając z usług świadczonych przez WB PARTNERS Sp. z o.o. („Firma”, „my”, „nas” lub „nasz”), zgadzasz się na przestrzeganie niniejszych Warunków Korzystania („Warunki”).
                         Jeśli nie zgadzasz się z jakąkolwiek częścią tych warunków, nie masz prawa korzystać z naszych usług.
                     </p>
                 </section>
@@ -16,7 +16,7 @@ export default function TermsOfService() {
                 <section>
                     <h2 className="text-2xl font-bold text-white mb-4">2. Usługi</h2>
                     <p>
-                        InCode świadczy usługi rozwoju produktów cyfrowych, w tym między innymi: tworzenie stron internetowych, aplikacji mobilnych, projektowanie UI/UX oraz konsultacje IT.
+                        WB PARTNERS Sp. z o.o. świadczy usługi rozwoju produktów cyfrowych, w tym między innymi: tworzenie stron internetowych, aplikacji mobilnych, projektowanie UI/UX oraz konsultacje IT.
                     </p>
                 </section>
 
@@ -59,7 +59,7 @@ export default function TermsOfService() {
                 <section>
                     <h2 className="text-2xl font-bold text-white mb-4">7. Ograniczenie odpowiedzialności</h2>
                     <p>
-                        W maksymalnym zakresie dozwolonym przez prawo, InCode nie ponosi odpowiedzialności za jakiekolwiek szkody pośrednie, przypadkowe, szczególne, wynikowe lub karne,
+                        W maksymalnym zakresie dozwolonym przez prawo, WB PARTNERS Sp. z o.o. nie ponosi odpowiedzialności za jakiekolwiek szkody pośrednie, przypadkowe, szczególne, wynikowe lub karne,
                         w tym utratę zysków, danych lub możliwości biznesowych, wynikające z korzystania z naszych usług.
                     </p>
                 </section>
@@ -90,10 +90,15 @@ export default function TermsOfService() {
                         <p className="mb-4">ul. Słowackiego 24/11<br />35-060 Rzeszów</p>
 
                         <strong className="block text-white mb-1">Email kontaktowy</strong>
-                        <a href="mailto:support@wb-partners.pl" className="text-primary hover:underline mb-4 block">support@wb-partners.pl</a>
+                        <a href="mailto:technical-support@wb-partners.pl" className="text-primary hover:underline mb-4 block">technical-support@wb-partners.pl</a>
 
                         <strong className="block text-white mb-1">Telefon kontaktowy</strong>
-                        <a href="tel:+48 570 028 761" className="text-primary hover:underline mb-4 block">+48 570 028 761</a>
+                        <a href="tel:+48 570 034 367" className="text-primary hover:underline mb-4 block">+48 570 034 367</a>
+
+                        <strong className="block text-white mb-1">Dane rejestrowe</strong>
+                        <p className="mb-1">NIP: 5170455185</p>
+                        <p className="mb-1">REGON: 540735769</p>
+                        <p>KRS: 0001151642</p>
                     </address>
                 </section>
             </div>

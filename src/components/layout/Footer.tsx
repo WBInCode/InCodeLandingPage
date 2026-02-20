@@ -46,10 +46,11 @@ export default function Footer() {
                         <h4 className="text-white font-semibold mb-4">Kontakt</h4>
                         <ul className="space-y-2">
                             <li>
-                                <a href="mailto:support@wb-partners.pl" className="flex items-center gap-2 text-gray-400 text-sm hover:text-primary transition-colors">
+                                <a href="mailto:technical-support@wb-partners.pl" className="flex items-center gap-2 text-gray-400 text-sm hover:text-primary transition-colors">
                                     <Mail size={16} />
-                                    support@wb-partners.pl
+                                    technical-support@wb-partners.pl
                                 </a>
+                                <span className="text-gray-500 text-xs mt-1 ml-6 block">Pon–Pią 9:00–17:00</span>
                             </li>
                             <li className="mt-4 pt-4 border-t border-white/5">
                                 <a href="https://wb-partners.pl" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 text-xs hover:text-white transition-colors group">

@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
                 <section>
                     <h2 className="text-2xl font-bold text-white mb-4">1. Wprowadzenie</h2>
                     <p>
-                        InCode sp. z o.o. („my”, „nasz” lub „nas”) zobowiązuje się do ochrony Twojej prywatności.
+                        WB PARTNERS Sp. z o.o. („my”, „nasz” lub „nas”) zobowiązuje się do ochrony Twojej prywatności.
                         Niniejsza Polityka Prywatności wyjaśnia, w jaki sposób zbieramy, wykorzystujemy, ujawniamy i chronimy Twoje dane podczas korzystania z naszej strony internetowej lub usług.
                     </p>
                     <p className="mt-4">
@@ -80,12 +80,15 @@ export default function PrivacyPolicy() {
                         <p className="mb-4">ul. Słowackiego 24/11<br />35-060 Rzeszów</p>
 
                         <strong className="block text-white mb-1">Email kontaktowy</strong>
-                        <a href="mailto:support@wb-partners.pl" className="text-primary hover:underline mb-4 block">support@wb-partners.pl</a>
+                        <a href="mailto:technical-support@wb-partners.pl" className="text-primary hover:underline mb-4 block">technical-support@wb-partners.pl</a>
 
                         <strong className="block text-white mb-1">Telefon kontaktowy</strong>
-                        <a href="tel:+48 570 028 761" className="text-primary hover:underline mb-4 block">+48 570 028 761</a>
+                        <a href="tel:+48 570 034 367" className="text-primary hover:underline mb-4 block">+48 570 034 367</a>
 
-                        
+                        <strong className="block text-white mb-1">Dane rejestrowe</strong>
+                        <p className="mb-1">NIP: 5170455185</p>
+                        <p className="mb-1">REGON: 540735769</p>
+                        <p>KRS: 0001151642</p>
                     </address>
                 </section>
             </div>
