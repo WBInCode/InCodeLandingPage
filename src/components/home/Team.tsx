@@ -25,15 +25,6 @@ const members = [
         gradient: "from-blue-500/20 via-blue-500/5 to-transparent"
     },
     {
-        name: "Jakub Sosnowski",
-        role: "Backend Developer",
-        icon: Database,
-        color: "text-emerald-400",
-        bg: "bg-emerald-500/10",
-        border: "border-emerald-500/30",
-        gradient: "from-emerald-500/20 via-emerald-500/5 to-transparent"
-    },
-    {
         name: "Kacper Franczyk",
         role: "Vibe-coder",
         icon: Sparkles,
