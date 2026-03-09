@@ -11,6 +11,7 @@ const projects = [
         description: "Zaawansowany kreator 3D pozwalający na personalizację etui na telefon. Integracja z systemem produkcji i zamówień.",
         tags: ["React", "Three.js", "WebGL", "eComm"],
         gradient: "from-violet-600 to-indigo-600",
+        image: "/img/portfolio-casestudio.png",
         link: "https://etui-app.vercel.app/",
         color: "#8b5cf6",
         icon: Smartphone
@@ -21,6 +22,7 @@ const projects = [
         description: "Nowoczesna platforma do wynajmu samochodów. System rezerwacji, zarządzanie flotą i panel klienta.",
         tags: ["Next.js", "Tailwind", "Booking System"],
         gradient: "from-blue-600 to-cyan-500",
+        image: "/img/portfolio-wbrent.png",
         link: "https://wb-rent.pl",
         color: "#3b82f6",
         icon: Globe
@@ -31,6 +33,7 @@ const projects = [
         description: "Platforma handlowa z systemem analizy danych i panelem klienta.",
         tags: ["Fintech", "dashboard", "Analytics"],
         gradient: "from-amber-500 to-orange-600",
+        image: "/img/portfolio-wbtrade.png",
         link: "https://wb-trade.pl",
         color: "#f97316",
         icon: Layout
@@ -73,23 +76,14 @@ export default function Portfolio() {
                             transition={{ delay: index * 0.1 }}
                             className="group relative block rounded-[2.5rem] overflow-hidden bg-surface-dark border border-white/5 hover:border-primary/30 transition-all duration-500"
                         >
-                            {/* Project Preview Area (Gradient + Placeholder) */}
-                            <div className={`h-72 w-full bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
-                                {/* Overlay */}
-                                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500" />
-
-                                {/* Decorative Icon Background */}
-                                <project.icon
-                                    className="absolute -bottom-10 -right-10 w-64 h-64 text-white/5 rotate-12 group-hover:rotate-0 group-hover:scale-110 transition-all duration-700"
-                                    strokeWidth={1}
+                            {/* Project Preview Area */}
+                            <div className={`h-72 w-full relative overflow-hidden bg-gradient-to-br ${project.gradient}`}>
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                                 />
-
-                                {/* Center Title for Preview (Temporary, ideally screenshots) */}
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <span className="text-3xl font-black text-white/90 drop-shadow-md text-center px-4">
-                                        {project.title}
-                                    </span>
-                                </div>
+                                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
                             </div>
 
                             {/* Content */}
