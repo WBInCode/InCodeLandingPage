@@ -16,16 +16,6 @@ const projects = [
         icon: Smartphone
     },
     {
-        title: "AcroClinic Shop",
-        category: "eCommerce Store",
-        description: "Sklep internetowy z premium sportswear i akcesoriami dla pasjonatów akrobatyki. System koszyka, logowania i zarządzania zamówieniami.",
-        tags: ["Next.js", "eCommerce", "Tailwind", "Auth"],
-        gradient: "from-emerald-600 to-teal-600",
-        link: "https://acroclinic-shop.vercel.app/",
-        color: "#10b981",
-        icon: Globe
-    },
-    {
         title: "WB Rent",
         category: "Car Rental Platform",
         description: "Nowoczesna platforma do wynajmu samochodów. System rezerwacji, zarządzanie flotą i panel klienta.",
