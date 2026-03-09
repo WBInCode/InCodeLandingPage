@@ -81,8 +81,7 @@ export default function Team() {
                             <path d="M 200 200 L 200 250" stroke="rgba(255,255,255,0.1)" strokeWidth="1" fill="none" />
                             {/* Center */}
                             <path d="M 500 200 L 500 250" stroke="rgba(255,255,255,0.1)" strokeWidth="1" fill="none" />
-                            {/* Right */}
-                            <path d="M 800 200 L 800 250" stroke="rgba(255,255,255,0.1)" strokeWidth="1" fill="none" />
+                            
                         </svg>
                     </div>
 
