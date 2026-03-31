@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   title: "WB InCode – Software House & Design Studio",
   description: "Tworzymy nowoczesne strony www i aplikacje webowe. Next.js, React, Design.",
   icons: {
-    icon: '/logonowe.png',
-    shortcut: '/logonowe.png',
-    apple: '/logonowe.png',
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
   },
 };
 
