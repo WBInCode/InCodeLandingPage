@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ShoppingBag } from "lucide-react";
 import { cn } from "@/lib/utils";
 import CareerSidebar from "@/components/layout/CareerSidebar";
 
@@ -64,6 +64,16 @@ export default function Navbar() {
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
                                 </Link>
                             ))}
+                            <a
+                                href="https://shop.wb-incode.pl/pl"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-sm font-medium text-gray-400 hover:text-white transition-colors relative group flex items-center gap-1.5"
+                            >
+                                <ShoppingBag size={16} />
+                                Sklep
+                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
+                            </a>
                             <button
                                 onClick={() => setIsCareerOpen(true)}
                                 className="text-sm font-medium text-gray-400 hover:text-white transition-colors relative group"
@@ -110,6 +120,16 @@ export default function Navbar() {
                                     {link.name}
                                 </Link>
                             ))}
+                            <a
+                                href="https://shop.wb-incode.pl/pl"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-base font-medium text-gray-400 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-white/5 flex items-center gap-2"
+                            >
+                                <ShoppingBag size={18} />
+                                Sklep
+                            </a>
                             <button
                                 onClick={() => {
                                     setIsMobileMenuOpen(false);

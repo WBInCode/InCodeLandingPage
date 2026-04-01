@@ -6,7 +6,7 @@ import { User, Code, Terminal, Database, Sparkles } from "lucide-react";
 // Team Data
 const leader = {
     name: "Miłosz Wiater",
-    role: "CEO & Lead Architect",
+    role: "Kierownik działu",
     icon: User,
     color: "text-primary",
     bg: "bg-primary/20",
@@ -17,7 +17,7 @@ const leader = {
 const members = [
     {
         name: "Jakub Maziarz",
-        role: "Frontend Developer",
+        role: "Młodszy specjalista",
         icon: Code,
         color: "text-blue-400",
         bg: "bg-blue-500/10",
@@ -26,7 +26,7 @@ const members = [
     },
     {
         name: "Kacper Franczyk",
-        role: "Vibe-coder",
+        role: "Młodszy specjalista",
         icon: Sparkles,
         color: "text-purple-400",
         bg: "bg-purple-500/10",
@@ -74,13 +74,13 @@ export default function Team() {
                             <path d="M 500 100 L 500 200" stroke="url(#lineGradient)" strokeWidth="2" fill="none" className="animate-pulse" />
 
                             {/* Branching Horizontal */}
-                            <path d="M 200 200 L 800 200" stroke="rgba(255,255,255,0.1)" strokeWidth="1" fill="none" />
+                            <path d="M 300 200 L 700 200" stroke="rgba(255,255,255,0.1)" strokeWidth="1" fill="none" />
 
                             {/* Branches Down to Members */}
                             {/* Left */}
-                            <path d="M 200 200 L 200 250" stroke="rgba(255,255,255,0.1)" strokeWidth="1" fill="none" />
-                            {/* Center */}
-                            <path d="M 500 200 L 500 250" stroke="rgba(255,255,255,0.1)" strokeWidth="1" fill="none" />
+                            <path d="M 300 200 L 300 250" stroke="rgba(255,255,255,0.1)" strokeWidth="1" fill="none" />
+                            {/* Right */}
+                            <path d="M 700 200 L 700 250" stroke="rgba(255,255,255,0.1)" strokeWidth="1" fill="none" />
                             
                         </svg>
                     </div>
@@ -113,7 +113,7 @@ export default function Team() {
                     <div className="absolute top-[280px] bottom-10 left-1/2 -translate-x-1/2 w-0.5 bg-gradient-to-b from-primary/50 to-transparent md:hidden z-0"></div>
 
                     {/* Level 2: Members */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl px-4 relative z-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl px-4 relative z-10">
                         {members.map((member, index) => (
                             <motion.div
                                 key={member.name}
@@ -143,7 +143,7 @@ export default function Team() {
                                                 <h4 className="text-lg font-bold text-white group-hover:text-white/90">{member.name}</h4>
                                                 <p className={`text-xs font-bold ${member.color} uppercase tracking-wide flex items-center gap-1`}>
                                                     {member.role}
-                                                    {member.role === "Vibe-coder" && <span className="animate-pulse">✨</span>}
+                                                    {member.name === "Kacper Franczyk" && <span className="animate-pulse">✨</span>}
                                                 </p>
                                             </div>
                                         </div>
