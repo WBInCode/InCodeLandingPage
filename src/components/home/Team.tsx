@@ -143,7 +143,7 @@ export default function Team() {
                                                 <h4 className="text-lg font-bold text-white group-hover:text-white/90">{member.name}</h4>
                                                 <p className={`text-xs font-bold ${member.color} uppercase tracking-wide flex items-center gap-1`}>
                                                     {member.role}
-                                                    {member.name === "Kacper Franczyk" && <span className="animate-pulse">✨</span>}
+
                                                 </p>
                                             </div>
                                         </div>
