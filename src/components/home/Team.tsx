@@ -50,7 +50,7 @@ export default function Team() {
                         Core Team
                     </span>
                     <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
-                        Mózgi operacji
+                        Nasz zespół
                     </h2>
                     <p className="text-gray-400 max-w-2xl mx-auto text-lg">
                         Mały zespół z wielkimi możliwościami.
