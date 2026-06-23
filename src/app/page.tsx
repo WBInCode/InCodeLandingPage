@@ -8,7 +8,6 @@ import Hero from "@/components/home/Hero";
 import TrustedBy from "@/components/home/TrustedBy";
 import Services from "@/components/home/Services";
 import Portfolio from "@/components/home/Portfolio";
-import Team from "@/components/home/Team";
 import Contact from "@/components/home/Contact";
 import Preloader from "@/components/layout/Preloader";
 import ProcessTimeline from "@/components/home/ProcessTimeline";
@@ -41,7 +40,6 @@ export default function Home() {
           <ProcessTimeline />
           <Portfolio />
           <FAQ />
-          <Team />
           <Contact />
 
           <Footer />
